@@ -4,6 +4,24 @@
   box-sizing: border-box;
 }
 
+// :root {
+//   ::-webkit-scrollbar {
+//     display: none;
+//   }
+// }
+
+#root {
+  position: fixed;
+  background: linear-gradient(180deg, #0c1b22 0%, #1c3134 100%);
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  overflow-y: scroll;
+  z-index: -10;
+}
+
 /* --------------------------------- Navbar --------------------------------- */
 
 .nav-parent{
@@ -13,6 +31,6 @@
   padding: 1rem 2rem;
   background-color: black;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  height: 100px;
+  height: 1000px;
   width: 100px;
 }
