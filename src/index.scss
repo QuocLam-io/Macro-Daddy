@@ -2,7 +2,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body{
   font-family: lexend;
+  color: white;
 }
 
 #root {
@@ -17,11 +21,7 @@
   z-index: -10;
 }
 
-// :root {
-//   ::-webkit-scrollbar {
-//     display: none;
-//   }
-// }
+
 
 //* --------------------------------- Navbar --------------------------------- */
 
@@ -54,15 +54,17 @@
     display: flex;
     width: 50%;
     flex-direction: column;
-    color: rgba(255, 255, 255, 0.7);
+    // color: rgba(255, 255, 255, 0.7);
     border: 2px teal solid;
-    
+
     .landing-title {
-      font-weight: 400;
-      font-size: 5rem;
-      .blub {
-        border-bottom: orange 2px solid;
-        width: 23vw;
+      font-family: koulen;
+      font-size: 5.55vw;
+      letter-spacing: 3px;
+      line-height: 100%;
+
+      :nth-child(1), :nth-child(2) {
+        color: hsla(0,0%,100%,.7);
       }
     }
   }

@@ -7,10 +7,9 @@ const LandingPage = () => {
     <div className="landing-parent">
       <div className="landing-left">
         <div className="landing-title">
-          <p>WhackDADDY</p>
-          <div className="blub"></div>
+          <p>WHACKDADDY</p>
           <p>TO</p>
-          <p>MacDADDY</p>
+          <p>MACDADDY</p>
         </div>
         <p>An evidence-based way to lose weight 💪</p>
         <button
