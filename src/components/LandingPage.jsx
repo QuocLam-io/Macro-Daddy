@@ -15,7 +15,7 @@ const LandingPage = () => {
         <div
           className="start-btn"
           onClick={() => {
-            setForm(true);
+            setForm(!form);
           }}
         >
           CLICK ME
