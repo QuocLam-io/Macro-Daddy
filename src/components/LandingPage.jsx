@@ -12,16 +12,21 @@ const LandingPage = () => {
           <p>MACDADDY</p>
         </div>
         <p>An evidence-based way to lose weight 💪</p>
-        <button
-          //TODO className="start-btn"
+        <div
+          className="start-btn"
           onClick={() => {
             setForm(true);
           }}
         >
-          CLICK ME <span>→</span>
-        </button>
+          CLICK ME
+        <span>→</span>
+        </div>
       </div>
-      {form && <form className="landing-form"></form>}
+      {form && (
+        <form className="landing-form">
+          <input type="text" />
+        </form>
+      )}
     </div>
   );
 };
