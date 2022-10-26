@@ -120,6 +120,7 @@ $test-border: 2px solid teal;
       &:hover > span {
         display: inline-block;
         transform: translateX(20px);
+        color: #ffa726;
         transition: 0.5s;
       }
     }
@@ -127,7 +128,65 @@ $test-border: 2px solid teal;
 
   .landing-form {
     width: 50%;
+    display: flex;
     flex-direction: column;
-    border: $test-border;
+    gap: 1.5vh;
+    animation: fadeInRight 1000ms forwards;
+    // border: $test-border;
+
+    @keyframes fadeInRight {
+      0% {
+        opacity: 0;
+        transform: translateX(80px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    :nth-child(1), :nth-child(4) {
+      font-family: koulen;
+      font-size: 1.9vw;
+      color: #ffa726;
+    }
+
+    :nth-child(2) {
+      font-size: 1.4vw;
+    }
+    :nth-child(5) {
+      text-decoration: underline;
+    }
+    :nth-child(6) {
+      color: #faebd7;
+    }
+
+    input,
+    select {
+      color: white;
+      height: 2.5vh;
+      font-size: 1.1vw;
+      width: 60%;
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.09) 0%,
+        rgba(255, 255, 255, 0.09) 100%
+      );
+
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+      box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+        0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
+      }
+    }
+
+    .submit-btn{
+      height: 5vh;
+      width: 12vw;
+      background: #ffa726;
+      border: none;
+      cursor: pointer;
+    }
   }
-}
+  
