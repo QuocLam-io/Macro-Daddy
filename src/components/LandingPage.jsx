@@ -1,7 +1,19 @@
 import React, { useState } from "react";
-const LandingPage = () => {
+import { setName, setAge, setSex, setHeight, setWeight, setActivityLevel, calculateBMR } from "../features/userBio/userBioSlice";
+import { useDispatch, useSelector } from "react-redux";
 
+const LandingPage = () => {
   const [form, setForm] = useState(false);
+  const { name, age, sex, height, weight, activityLevel } = useSelector(
+    (store) => store.userBio
+  );
+  const dispatch = useDispatch();
+  console.log(name);
+  console.log(age);
+  console.log(sex);
+  console.log(weight);
+  console.log(height);
+  console.log(activityLevel);
 
   return (
     <div className="landing-parent">
@@ -23,7 +35,18 @@ const LandingPage = () => {
         </div>
       </div>
       {form && (
-        <form className="landing-form">
+        <form
+          className="landing-form"
+          onSubmit={(e) => {
+            e.preventDefault();
+            dispatch(setName(e.target[0].value));
+            dispatch(setAge(parseInt(e.target[1].value)));
+            dispatch(setName(e.target[0].value));
+            dispatch(setName(e.target[0].value));
+            dispatch(setName(e.target[0].value));
+            dispatch(setName(e.target[0].value));
+          }}
+        >
           <p>CREATE YOUR PROFILE</p>
           <p>Enter Your Name</p>
           <input type="text" placeholder="Name" />
@@ -35,8 +58,10 @@ const LandingPage = () => {
             consume for your weight loss goal.
           </p>
           <input type="number" placeholder="Age (Years)" min="18" />
-          <select name="gender" id="gender">
-            <option disabled selected className="grey-text">Assigned Sex At Birth</option>
+          <select defaultValue={'DEFAULT'} name="gender" id="gender">
+            <option disabled value="DEFAULT" className="grey-text">
+              Assigned Sex At Birth
+            </option>
             <option className="test" value="male">
               Male
             </option>
@@ -44,8 +69,10 @@ const LandingPage = () => {
           </select>
           <input type="number" placeholder="Height (Inches)" />
           <input type="number" placeholder="Weight (Pounds)" />
-          <select name="physical" id="physical">
-          <option disabled selected>Activity Level </option>
+          <select defaultValue={'DEFAULT'} name="physical" id="physical">
+            <option value="DEFAULT" disabled >
+              Activity Level{" "}
+            </option>
             <option value="1.2">Sedentary 🦥</option>
             <option value="1.375">Light Activity: Exercise 1-3/week 🐷</option>
             <option value="1.55">
@@ -54,7 +81,9 @@ const LandingPage = () => {
             <option value="1.725">Very Active: Exercise 6-7/week 🦈</option>
             <option value="1.9">Lean Meat: Exercise 7+/week 🦁</option>
           </select>
-          <button className="submit-btn" type="submit">LET'S GOOOO</button>
+          <button className="submit-btn" type="submit">
+            LET'S GOOOO
+          </button>
         </form>
       )}
     </div>

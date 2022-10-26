@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
+  name: "",
   age: 0,
   sex: "",
   height: 0,
@@ -12,6 +13,9 @@ const userBioSlice = createSlice({
   name: "userBio",
   initialState: initialState,
   reducers: {
+    setName: (state, action) => {
+      state.name = action.payload;
+    },
     setAge: (state, action) => {
       state.age = action.payload;
     },
@@ -33,5 +37,5 @@ const userBioSlice = createSlice({
   },
 });
 
-export const { setAge, setSex, setHeight, setWeight, setActivityLevel, calculateBMR } = userBioSlice.actions;
+export const { setName, setAge, setSex, setHeight, setWeight, setActivityLevel, calculateBMR } = userBioSlice.actions;
 export default userBioSlice.reducer;
