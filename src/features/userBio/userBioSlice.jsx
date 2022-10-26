@@ -8,6 +8,7 @@ const initialState = {
   weight: 0,
   activityLevel: 0,
   bmr: 0,
+  signedIn: false,
 };
 
 const userBioSlice = createSlice({
@@ -31,6 +32,9 @@ const userBioSlice = createSlice({
     },
     setActivityLevel: (state, action) => {
       state.activityLevel = action.payload;
+    },
+    setSignedIn: (state) => {
+      state.signedIn = !state.signedIn;
     },
     calculateBMR: (state) => {
       if (state.sex === "female") {
@@ -58,5 +62,5 @@ const userBioSlice = createSlice({
   },
 });
 
-export const { setName, setAge, setSex, setHeight, setWeight, setActivityLevel, calculateBMR } = userBioSlice.actions;
+export const { setName, setAge, setSex, setHeight, setWeight, setActivityLevel, calculateBMR, setSignedIn } = userBioSlice.actions;
 export default userBioSlice.reducer;

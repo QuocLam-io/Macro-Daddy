@@ -7,12 +7,13 @@ import {
   setWeight,
   setActivityLevel,
   calculateBMR,
+  setSignedIn,
 } from "../features/userBio/userBioSlice";
 import { useDispatch} from "react-redux";
 
 const LandingPage = () => {
   const [form, setForm] = useState(false);
-  // const { name, age, sex, height, weight, activityLevel } = useSelector(
+  // const { name, age, sex, height, weight, activityLevel, bmr, signedIn } = useSelector(
   //   (store) => store.userBio
   // );
   const dispatch = useDispatch();
@@ -48,6 +49,7 @@ const LandingPage = () => {
             dispatch(setWeight(parseInt(e.target[4].value)));
             dispatch(setActivityLevel(parseFloat(e.target[5].value)));
             dispatch(calculateBMR());
+            dispatch(setSignedIn());
           }}
         >
           <p>CREATE YOUR PROFILE</p>
@@ -62,7 +64,7 @@ const LandingPage = () => {
           </p>
           <input required type="number" placeholder="Age (Years)" min="18" />
           <select required defaultValue={"DEFAULT"} name="gender" id="gender">
-            <option disabled value="DEFAULT" className="grey-text">
+            <option disabled value="" className="grey-text">
               Assigned Sex At Birth
             </option>
             <option className="test" value="male">
@@ -73,7 +75,7 @@ const LandingPage = () => {
           <input required type="number" placeholder="Height (Inches)" />
           <input required type="number" placeholder="Weight (Pounds)" />
           <select required defaultValue={"DEFAULT"} name="physical" id="physical">
-            <option value="DEFAULT" disabled>
+            <option value="" disabled>
               Activity Level{" "}
             </option>
             <option value="1.2">Sedentary 🦥</option>
