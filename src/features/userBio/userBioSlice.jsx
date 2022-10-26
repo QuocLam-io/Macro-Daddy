@@ -7,6 +7,7 @@ const initialState = {
   height: 0,
   weight: 0,
   activityLevel: 0,
+  bmr: 0,
 };
 
 const userBioSlice = createSlice({
@@ -32,7 +33,27 @@ const userBioSlice = createSlice({
       state.activityLevel = action.payload;
     },
     calculateBMR: (state) => {
-//Todo add calculation logic 
+      if (state.sex === "female") {
+        state.bmr =
+          Math.round(
+            (655 +
+              4.35 * state.weight +
+              4.7 * state.height -
+              4.7 * state.age) *
+              state.activityLevel
+          )
+        ;
+      } else {
+       state.bmr = 
+          Math.round(
+            (66 +
+              6.23 * state.weight +
+              12.7 * state.height -
+              6.8 * state.age) *
+              state.activityLevel
+          )
+        ;
+      }
     },
   },
 });

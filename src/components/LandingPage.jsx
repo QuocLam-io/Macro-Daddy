@@ -1,19 +1,21 @@
 import React, { useState } from "react";
-import { setName, setAge, setSex, setHeight, setWeight, setActivityLevel, calculateBMR } from "../features/userBio/userBioSlice";
-import { useDispatch, useSelector } from "react-redux";
+import {
+  setName,
+  setAge,
+  setSex,
+  setHeight,
+  setWeight,
+  setActivityLevel,
+  calculateBMR,
+} from "../features/userBio/userBioSlice";
+import { useDispatch} from "react-redux";
 
 const LandingPage = () => {
   const [form, setForm] = useState(false);
-  const { name, age, sex, height, weight, activityLevel } = useSelector(
-    (store) => store.userBio
-  );
+  // const { name, age, sex, height, weight, activityLevel } = useSelector(
+  //   (store) => store.userBio
+  // );
   const dispatch = useDispatch();
-  console.log(name);
-  console.log(age);
-  console.log(sex);
-  console.log(weight);
-  console.log(height);
-  console.log(activityLevel);
 
   return (
     <div className="landing-parent">
@@ -41,15 +43,16 @@ const LandingPage = () => {
             e.preventDefault();
             dispatch(setName(e.target[0].value));
             dispatch(setAge(parseInt(e.target[1].value)));
-            dispatch(setName(e.target[0].value));
-            dispatch(setName(e.target[0].value));
-            dispatch(setName(e.target[0].value));
-            dispatch(setName(e.target[0].value));
+            dispatch(setSex(e.target[2].value));
+            dispatch(setHeight(parseInt(e.target[3].value)));
+            dispatch(setWeight(parseInt(e.target[4].value)));
+            dispatch(setActivityLevel(parseFloat(e.target[5].value)));
+            dispatch(calculateBMR());
           }}
         >
           <p>CREATE YOUR PROFILE</p>
           <p>Enter Your Name</p>
-          <input type="text" placeholder="Name" />
+          <input required type="text" placeholder="Name" />
           <p>CALCULATE HOW MANY CALORIES YOU USE DAILY</p>
           <p>Harris-Benedict Calculator</p>
           <p>
@@ -57,8 +60,8 @@ const LandingPage = () => {
             baseline to help recommend the amount of macros you can plan to
             consume for your weight loss goal.
           </p>
-          <input type="number" placeholder="Age (Years)" min="18" />
-          <select defaultValue={'DEFAULT'} name="gender" id="gender">
+          <input required type="number" placeholder="Age (Years)" min="18" />
+          <select required defaultValue={"DEFAULT"} name="gender" id="gender">
             <option disabled value="DEFAULT" className="grey-text">
               Assigned Sex At Birth
             </option>
@@ -67,10 +70,10 @@ const LandingPage = () => {
             </option>
             <option value="female">Female</option>
           </select>
-          <input type="number" placeholder="Height (Inches)" />
-          <input type="number" placeholder="Weight (Pounds)" />
-          <select defaultValue={'DEFAULT'} name="physical" id="physical">
-            <option value="DEFAULT" disabled >
+          <input required type="number" placeholder="Height (Inches)" />
+          <input required type="number" placeholder="Weight (Pounds)" />
+          <select required defaultValue={"DEFAULT"} name="physical" id="physical">
+            <option value="DEFAULT" disabled>
               Activity Level{" "}
             </option>
             <option value="1.2">Sedentary 🦥</option>
