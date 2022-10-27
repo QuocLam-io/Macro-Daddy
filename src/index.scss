@@ -62,7 +62,7 @@ $test-border: 2px solid teal;
   .icon {
     display: flex;
     height: 85%;
-    gap: 5px;
+    gap: 10px;
     font-family: Koulen;
     // border: $test-border;
 
@@ -211,6 +211,7 @@ $test-border: 2px solid teal;
   .submit-btn {
     height: 5vh;
     width: 12vw;
+    font-size: .9vw;
     background: #ffa726;
     border: none;
     cursor: pointer;

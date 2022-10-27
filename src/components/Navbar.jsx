@@ -4,13 +4,14 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <div className="nav-parent">
-      <Link to="/" >
+      <Link to="/">
         <div className="icon">
           <img src="/imgs/icon.svg" alt="blub" />
           <p>Macro DADDY</p>
         </div>
+      </Link>
 
-        <div className="nav-input" action="">
+      <div className="nav-searchbar" action="">
         <input
           type="text"
           name=""
@@ -21,12 +22,14 @@ const Navbar = () => {
           // onKeyDown={handleKeyDown}
         />
 
-        <button className="mag-btn" type="submit" 
-        // onClick={submitHandler}
+        <button
+          className=""
+          type="submit"
+          // onClick={submitHandler}
         >
           <img
             className="magnify"
-            src={require(`../images/magnify.png`)}
+            src="/imgs/magnify.png"
             alt=""
           />
         </button>
@@ -34,7 +37,6 @@ const Navbar = () => {
 
       <Link to="/userpage">
         <p className="user-btn">MY MACROS</p>
-      </Link>
       </Link>
     </div>
   );
