@@ -5,6 +5,8 @@ import axios from "axios";
 
 const Navbar = () => {
   const { signedIn } = useSelector((store) => store.userBio);
+  //todo: store search result slice
+  //todo: useSelector that state and put into pepperoni pizza
 
   const callAxios = () => {
     axios
