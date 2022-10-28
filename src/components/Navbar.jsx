@@ -1,7 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
+  const { signedIn } = useSelector((store) => store.userBio);
+
   return (
     <div className="nav-parent">
       <Link to="/">
