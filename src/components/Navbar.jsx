@@ -7,6 +7,7 @@ const Navbar = () => {
 
   return (
     <div className="nav-parent">
+
       <Link to="/">
         <div className="icon">
           <img src="/imgs/icon.svg" alt="blub" />
@@ -14,7 +15,7 @@ const Navbar = () => {
         </div>
       </Link>
 
-      <div className="nav-searchbar" action="">
+  {signedIn &&    <div className="nav-search" action="">
         <input
           type="text"
           name=""
@@ -26,21 +27,17 @@ const Navbar = () => {
         />
 
         <button
-          className=""
           type="submit"
           // onClick={submitHandler}
         >
-          <img
-            className="magnify"
-            src="/imgs/magnify.png"
-            alt=""
-          />
+          <img className="magnify" src="/imgs/magnify.png" alt="" />
         </button>
-      </div>
+      </div>}
 
-      <Link to="/userpage">
-        <p className="user-btn">MY MACROS</p>
-      </Link>
+      {signedIn &&<Link className="user-page" to="/userPage">
+        MY MACROS
+      </Link>}
+
     </div>
   );
 };
