@@ -2,11 +2,11 @@ import { Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import LandingPage from "./components/LandingPage";
 import CardList from "./components/CardList";
+import UserPage from "./components/UserPage";
 import { useSelector } from "react-redux";
 
 function App() {
   const { signedIn } = useSelector((store) => store.userBio);
-  
 
   return (
     <div className="App">
@@ -16,6 +16,7 @@ function App() {
           path="/"
           element={signedIn ? <CardList /> : <LandingPage />}
         ></Route>
+        <Route path="/userpage" element={<UserPage />} />
       </Routes>
     </div>
   );

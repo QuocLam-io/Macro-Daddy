@@ -8,6 +8,7 @@ const Navbar = () => {
   //todo: store search result slice
   //todo: useSelector that state and put into pepperoni pizza
 
+  //? --------------------------- Call Axios Function -------------------------- */
   const callAxios = () => {
     axios
       .post(
@@ -24,12 +25,36 @@ const Navbar = () => {
         }
       )
       .then((res) => {
-        console.log(res);
+        //todo: store res in recipes slice
+        console.log(res.data);
       })
       .catch((error) => {
         console.log(error);
       });
   };
+  //? -------------------------------------------------------------------------- */
+
+  //! Search Handler Function
+  // const searchResultsHandler = (e) => {
+  //   setSearchResults(e.target.value);
+  // };
+
+  //! Enter Button Function
+  // const handleKeyDown = (event) => {
+  //   if (event.key === "Enter") {
+  //     submitHandler(event);
+  //     console.log("Enter key pressed ✅");
+  //   }
+  // };
+
+  //! Submit Handler Function
+  // const submitHandler = (e) => {
+  //   e.preventDefault();
+  //   callAxios();
+  //   setSearchResults("");
+  // };
+
+
 
   return (
     <div className="nav-parent">
@@ -65,7 +90,7 @@ const Navbar = () => {
       )}
 
       {signedIn && (
-        <Link className="user-page" to="/userPage">
+        <Link className="user-page" to="userpage">
           MY MACROS
         </Link>
       )}
