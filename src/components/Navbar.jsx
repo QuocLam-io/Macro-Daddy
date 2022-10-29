@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import axios from "axios";
 
 const Navbar = () => {
   const { signedIn } = useSelector((store) => store.userBio);
+  const [searchResults, setSearchResults] = useState("");
+
   //todo: store search result slice
   //todo: useSelector that state and put into pepperoni pizza
 
@@ -34,11 +36,6 @@ const Navbar = () => {
   };
   //? -------------------------------------------------------------------------- */
 
-  //! Search Handler Function
-  // const searchResultsHandler = (e) => {
-  //   setSearchResults(e.target.value);
-  // };
-
   //! Enter Button Function
   // const handleKeyDown = (event) => {
   //   if (event.key === "Enter") {
@@ -53,8 +50,6 @@ const Navbar = () => {
   //   callAxios();
   //   setSearchResults("");
   // };
-
-
 
   return (
     <div className="nav-parent">
@@ -72,8 +67,10 @@ const Navbar = () => {
             name=""
             id=""
             placeholder="Search Food"
-            // value={searchResults}
-            // onChange={searchResultsHandler}
+            value={searchResults}
+            onChange={(e) => {
+              setSearchResults(e.target.value);
+            }}
             // onKeyDown={handleKeyDown}
           />
 
