@@ -5,51 +5,70 @@ import axios from "axios";
 
 const Navbar = () => {
   const { signedIn } = useSelector((store) => store.userBio);
-  const [searchResults, setSearchResults] = useState("");
+  const [searchQuery, setSearchQuery] = useState("");
 
-  //todo: store search result slice
-  //todo: useSelector that state and put into pepperoni pizza
+  //Todo: Make dotenv file
 
-  //? --------------------------- Call Axios Function -------------------------- */
-  const callAxios = () => {
+  //? --------------------------- Searchbar Function -------------------------- */
+  //! Call Recipe Axios
+  const callRecipeAxios = () => {
     axios
-      .post(
-        `https://trackapi.nutritionix.com/v2/natural/nutrients/`,
-        {
-          query: "pepperoni pizza",
-        },
+      .get(
+        `https://trackapi.nutritionix.com/v2/search/instant?query=${searchQuery}`,
         {
           headers: {
             "x-app-id": "40b82218",
             "x-app-key": "0b053788ee5d2365587a6aa568240953",
-            "Content-Type": "application/json",
           },
         }
       )
       .then((res) => {
-        //todo: store res in recipes slice
-        console.log(res.data);
+        console.log(res.data.common);
       })
       .catch((error) => {
         console.log(error);
       });
   };
-  //? -------------------------------------------------------------------------- */
+
+  // //! Call Nutrition Axios
+  // const callNutritionAxios = () => {
+  //   axios
+  //     .post(
+  //       `https://trackapi.nutritionix.com/v2/natural/nutrients/`,
+  //       {
+  //         //! Change: query: `${}`,
+  //       },
+  //       {
+  //         headers: {
+  //           "x-app-id": "40b82218",
+  //           "x-app-key": "0b053788ee5d2365587a6aa568240953",
+  //           "Content-Type": "application/json",
+  //         },
+  //       }
+  //     )
+  //     .then((res) => {
+  //       console.log(res.data);
+  //     })
+  //     .catch((error) => {
+  //       console.log(error);
+  //     });
+  // };
 
   //! Enter Button Function
-  // const handleKeyDown = (event) => {
-  //   if (event.key === "Enter") {
-  //     submitHandler(event);
-  //     console.log("Enter key pressed ✅");
-  //   }
-  // };
+  const handleKeyDown = (event) => {
+    if (event.key === "Enter") {
+      submitHandler(event);
+      console.log("Enter key pressed ✅");
+    }
+  };
 
   //! Submit Handler Function
-  // const submitHandler = (e) => {
-  //   e.preventDefault();
-  //   callAxios();
-  //   setSearchResults("");
-  // };
+  const submitHandler = (e) => {
+    e.preventDefault();
+    callRecipeAxios();
+    setSearchQuery("");
+  };
+  //? -------------------------------------------------------------------------- */
 
   return (
     <div className="nav-parent">
@@ -67,16 +86,16 @@ const Navbar = () => {
             name=""
             id=""
             placeholder="Search Food"
-            value={searchResults}
+            value={searchQuery}
             onChange={(e) => {
-              setSearchResults(e.target.value);
+              setSearchQuery(e.target.value);
             }}
-            // onKeyDown={handleKeyDown}
+            onKeyDown={handleKeyDown}
           />
 
           <button
             onClick={(e) => {
-              callAxios();
+              callRecipeAxios();
             }}
             type="submit"
             // onClick={submitHandler}
