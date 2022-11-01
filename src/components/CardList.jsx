@@ -1,22 +1,25 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useSelector } from "react-redux";
+import CommonCard from "./CommonCard";
+import BrandedCard from "./BrandedCard";
 
 const CardList = () => {
   const { bmr } = useSelector((store) => store.userBio);
   const { common, branded } = useSelector((store) => store.searchResults);
 
-  //Todo: turn to map
-  useEffect(() => {
-    console.log(common);
-  }, [common]);
+  const commonCard = common.map((food) => {
+    return <CommonCard food={food} />;
+  });
 
-  useEffect(()=>{
-    console.log(branded);
-  }, [branded])
-
+  const brandedCard = branded.map((food) => {
+    return <BrandedCard food={food} />;
+  });
   return (
     <div className="cardlist-parent">
-      <div className="search-results-display"></div>
+      <div className="search-results-display">
+        {commonCard}
+        {brandedCard}
+      </div>
       <div className="macro-display">
         <p>MY DAILY MACROS</p>
         <div className="bmr-divide">
