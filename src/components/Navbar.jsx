@@ -30,8 +30,8 @@ const Navbar = () => {
       });
   };
 
-  // //! Call Nutrition Axios
-  // const callNutritionAxios = () => {
+  // //! Call Common Axios
+  // const callCommonAxios = () => {
   //   axios
   //     .post(
   //       `https://trackapi.nutritionix.com/v2/natural/nutrients/`,
