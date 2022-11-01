@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
 
 const CardList = () => {
   const { bmr } = useSelector((store) => store.userBio);
   const { common, branded } = useSelector((store) => store.searchResults);
+
+  //Todo: turn to map
+  useEffect(() => {
+    console.log(common);
+  }, [common]);
+
+  useEffect(()=>{
+    console.log(branded);
+  }, [branded])
 
   return (
     <div className="cardlist-parent">

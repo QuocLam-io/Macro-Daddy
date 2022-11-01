@@ -31,7 +31,6 @@ const Navbar = () => {
       .then((res) => {
         dispatch(setCommon(res.data.common));
         dispatch(setBranded(res.data.branded));
-        console.log(res.data);
       })
       .catch((error) => {
         console.log(error);
