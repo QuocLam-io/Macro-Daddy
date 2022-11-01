@@ -10,7 +10,7 @@ const Navbar = () => {
   //Todo: Make dotenv file
 
   //? --------------------------- Searchbar Function -------------------------- */
-  //! Call Recipe Axios
+  //!----------- Call Recipe Axios
   const callRecipeAxios = () => {
     axios
       .get(
@@ -23,7 +23,7 @@ const Navbar = () => {
         }
       )
       .then((res) => {
-        console.log(res.data.common);
+        console.log(res.data);
       })
       .catch((error) => {
         console.log(error);
@@ -95,10 +95,9 @@ const Navbar = () => {
 
           <button
             onClick={(e) => {
-              callRecipeAxios();
+              submitHandler(e);
             }}
             type="submit"
-            // onClick={submitHandler}
           >
             <img className="magnify" src="/imgs/magnify.png" alt="" />
           </button>

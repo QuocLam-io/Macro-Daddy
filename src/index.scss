@@ -267,7 +267,8 @@ $test-border: 2px solid teal;
   .macro-display {
     display: flex;
     flex-direction: column;
-    align-items: center;  
+    align-items: center;
+    gap: 2vh;
     position: fixed;
     right: 0px;
     width: 35%;
@@ -280,5 +281,29 @@ $test-border: 2px solid teal;
     height: 100%;
     // font-family: koulen;
     flex-direction: column;
+
+    p {
+      font-family: "Koulen";
+      font-size: 2.5vw;
+    }
+
+    .bmr-divide {
+      display: flex;
+      font-size: 3vw;
+      color: #faebd7;
+      gap: 1vw;
+
+      span {
+        display: flex;
+        align-items: flex-end;
+        font-size: 2vw;
+        color: #ffa726;
+        // border: $test-border;
+      }
+    }
+
+    .macro-counts {
+      border: $test-border;
+    }
   }
 }
