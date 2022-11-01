@@ -2,10 +2,16 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import axios from "axios";
+import {
+  setBranded,
+  setCommon,
+} from "../features/searchResults/searchResultsSlice";
+import { useDispatch } from "react-redux";
 
 const Navbar = () => {
   const { signedIn } = useSelector((store) => store.userBio);
   const [searchQuery, setSearchQuery] = useState("");
+  const dispatch = useDispatch();
 
   //Todo: Make dotenv file
 
@@ -23,6 +29,8 @@ const Navbar = () => {
         }
       )
       .then((res) => {
+        dispatch(setCommon(res.data.common));
+        dispatch(setBranded(res.data.branded));
         console.log(res.data);
       })
       .catch((error) => {
