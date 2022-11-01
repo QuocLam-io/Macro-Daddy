@@ -16,7 +16,7 @@ const Navbar = () => {
   //Todo: Make dotenv file
 
   //? --------------------------- Searchbar Function -------------------------- */
-  //!----------- Call Recipe Axios
+  
   const callRecipeAxios = () => {
     axios
       .get(

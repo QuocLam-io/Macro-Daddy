@@ -1,6 +1,6 @@
 import React from 'react'
 
-const CommonCard = () => {
+const CommonCard = ({food, key}) => {
   return (
     <div>CommonCard</div>
   )

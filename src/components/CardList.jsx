@@ -8,12 +8,13 @@ const CardList = () => {
   const { common, branded } = useSelector((store) => store.searchResults);
 
   const commonCard = common.map((food) => {
-    return <CommonCard food={food} />;
+    return <CommonCard food={food} key={food.food_name} />;
   });
 
   const brandedCard = branded.map((food) => {
-    return <BrandedCard food={food} />;
+    return <BrandedCard food={food} key={food.food_name} />;
   });
+
   return (
     <div className="cardlist-parent">
       <div className="search-results-display">
