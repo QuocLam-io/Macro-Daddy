@@ -8,11 +8,11 @@ const CardList = () => {
   const { common, branded } = useSelector((store) => store.searchResults);
 
   const commonCard = common.map((food) => {
-    return <CommonCard food={food} key={food.food_name} />;
+    return <CommonCard food={food} />;
   });
 
   const brandedCard = branded.map((food) => {
-    return <BrandedCard food={food} key={food.food_name} />;
+    return <BrandedCard food={food} />;
   });
 
   return (
