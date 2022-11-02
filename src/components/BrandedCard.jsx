@@ -1,8 +1,7 @@
 import React from "react";
 import axios from "axios";
 
-const BrandedCard = ({ food, key }) => {
-  
+const BrandedCard = ({ food }) => {
   const callBrandedNutrients = () => {
     axios
       .get(
@@ -22,11 +21,13 @@ const BrandedCard = ({ food, key }) => {
       });
   };
 
-  return <div className="branded-card-parent">
-    <img src={food.photo.thumb} alt="" />
+  return (
+    <div className="branded-card-parent">
+      <img src={food.photo.thumb} alt="" />
       <p>{food["food_name"]}</p>
       <button onClick={callBrandedNutrients}>Submit</button>
-  </div>;
+    </div>
+  );
 };
 
 export default BrandedCard;
