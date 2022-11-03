@@ -1,7 +1,17 @@
 import React from "react";
 import axios from "axios";
+import { useDispatch } from "react-redux";
+import {
+  addMeal,
+  increaseCalories,
+  increaseFat,
+  increaseCarbs,
+  increaseProtein,
+} from "../features/mealHistory/mealHistorySlice";
 
 const BrandedCard = ({ food }) => {
+  const dispatch = useDispatch();
+
   const callBrandedNutrients = () => {
     axios
       .get(
@@ -15,6 +25,22 @@ const BrandedCard = ({ food }) => {
       )
       .then((res) => {
         console.log(res.data);
+        let nutrients = res.data.foods[0];
+        dispatch(increaseCalories(nutrients.nf_calories));
+        dispatch(increaseFat(nutrients.nf_total_fat));
+        dispatch(increaseProtein(nutrients.nf_protein));
+        dispatch(increaseCarbs(nutrients.nf_total_carbohydrate));
+        dispatch(
+          addMeal({
+            name: food.food_name,
+            type: "branded",
+            calories: nutrients.nf_calories,
+            fat: nutrients.nf_total_fat,
+            protein: nutrients.nf_protein,
+            carbs: nutrients.nf_total_carbohydrate,
+            photo: nutrients.photo.thumb,
+          })
+        );
       })
       .catch((err) => {
         console.log(err);

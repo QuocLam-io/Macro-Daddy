@@ -1,6 +1,5 @@
 import React from "react";
 import axios from "axios";
-// import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import {
   addMeal,
@@ -28,7 +27,7 @@ const CommonCard = ({ food }) => {
         }
       )
       .then((res) => {
-        console.log(res.data.foods[0]);
+        // console.log(res.data.foods[0]);
         let nutrients = res.data.foods[0]
         dispatch(increaseCalories(nutrients.nf_calories))
         dispatch(increaseFat(nutrients.nf_total_fat))

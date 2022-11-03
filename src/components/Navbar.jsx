@@ -13,10 +13,10 @@ const Navbar = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const dispatch = useDispatch();
 
-  //Todo: Make dotenv file
+  //TODO: Make dotenv file
 
   //? --------------------------- Searchbar Function -------------------------- */
-  
+
   const callRecipeAxios = () => {
     axios
       .get(
