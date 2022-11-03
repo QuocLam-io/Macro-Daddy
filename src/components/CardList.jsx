@@ -6,6 +6,9 @@ import BrandedCard from "./BrandedCard";
 const CardList = () => {
   const { bmr } = useSelector((store) => store.userBio);
   const { common, branded } = useSelector((store) => store.searchResults);
+  const { meals, protein, carbs, fat, calories } = useSelector(
+    (store) => store.mealHistory
+  );
 
   const commonCard = common.map((food) => {
     return <CommonCard food={food} key={food.food_name} />;
@@ -18,21 +21,20 @@ const CardList = () => {
   return (
     <div className="cardlist-parent">
       <div className="search-results-display">
-        {/*//!TODO: Turn back on */}
-        {/* {commonCard} */}
+        {commonCard}
         {brandedCard}
       </div>
 
       <div className="macro-display">
         <p>MY DAILY MACROS</p>
         <div className="bmr-divide">
-          0<span>TDEE</span> / {bmr} <span>Calories</span>
+          {calories}<span>Calories</span> / {bmr} <span>TDEE</span>
         </div>
         <div className="bmr-difference">Difference</div>
         <div className="macro-counts">
-          <div className="display-protein"></div>
-          <div className="display-carbs"></div>
-          <div className="display-fats"></div>
+          <div className="display-protein">{protein} </div>
+          <div className="display-carbs"> {carbs} </div>
+          <div className="display-fats">{fat} </div>
         </div>
       </div>
     </div>
