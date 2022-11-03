@@ -28,9 +28,12 @@ const CardList = () => {
       <div className="macro-display">
         <p>MY DAILY MACROS</p>
         <div className="bmr-divide">
-          {calories}<span>Calories</span> / {bmr} <span>TDEE</span>
+          {calories}
+          <span>Calories</span> / {bmr} <span>TDEE</span>
         </div>
-        <div className="bmr-difference">Difference</div>
+        <div className="bmr-difference">
+          {calories - bmr} {bmr > calories ? "Calorie Deficit" : "Weight gain"}
+        </div>
         <div className="macro-counts">
           <div className="display-protein">{protein} </div>
           <div className="display-carbs"> {carbs} </div>
