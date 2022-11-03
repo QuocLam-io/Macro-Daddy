@@ -13,19 +13,19 @@ const mealHistorySlice = createSlice({
   initialState: initialState,
   reducers: {
     addMeal: (state, action) => {
-      state.meals.push = action.payload;
+      state.meals.push(action.payload);
     },
     increaseProtein: (state, action) => {
       state.protein += action.payload;
     },
     increaseCarbs: (state, action) => {
-      state.protein += action.payload;
+      state.carbs += action.payload;
     },
     increaseFat: (state, action) => {
-      state.protein += action.payload;
+      state.fat += action.payload;
     },
     increaseCalories: (state, action) => {
-      state.protein += action.payload;
+      state.calories += action.payload;
     },
   },
 });

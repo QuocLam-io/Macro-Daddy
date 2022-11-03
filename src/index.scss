@@ -261,8 +261,10 @@ $test-border: 2px solid teal;
 
   .search-results-display {
     display: flex;
+    flex-wrap: wrap;
     overflow: scroll;
     width: 65%;
+    // border: $test-border;
   }
   .macro-display {
     display: flex;

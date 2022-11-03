@@ -1,7 +1,18 @@
 import React from "react";
 import axios from "axios";
+// import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import {
+  addMeal,
+  increaseCalories,
+  increaseFat,
+  increaseCarbs,
+  increaseProtein
+} from "../features/mealHistory/mealHistorySlice";
 
 const CommonCard = ({ food }) => {
+  const dispatch = useDispatch();
+
   const callCommonNutrients = () => {
     axios
       .post(
@@ -17,7 +28,21 @@ const CommonCard = ({ food }) => {
         }
       )
       .then((res) => {
-        console.log(res.data);
+        console.log(res.data.foods[0]);
+        let nutrients = res.data.foods[0]
+        dispatch(increaseCalories(nutrients.nf_calories))
+        dispatch(increaseFat(nutrients.nf_total_fat))
+        dispatch(increaseProtein(nutrients.nf_protein))
+        dispatch(increaseCarbs(nutrients.nf_total_carbohydrate))
+        dispatch(addMeal({
+          name: food.food_name,
+          type: "common",
+          calories: nutrients.nf_calories,
+          fat: nutrients.nf_total_fat,
+          protein: nutrients.nf_protein,
+          carbs: nutrients.nf_total_carbohydrate,
+          photo: nutrients.photo.thumb,
+        }))
       })
       .catch((err) => {
         console.log(err);
