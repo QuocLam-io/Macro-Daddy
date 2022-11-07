@@ -281,9 +281,11 @@ $test-border: 2px solid teal;
         rgba(255, 255, 255, 0.07) 100%
       ),
       #121212;
-    height: 100%;
-    // font-family: koulen;
+    height: 92vh;
     flex-direction: column;
+    .meal-history {
+      overflow: scroll;
+    }
 
     p {
       font-family: "Koulen";
@@ -324,5 +326,6 @@ $test-border: 2px solid teal;
 
 //* -------------------------------- MealCard -------------------------------- */
 .mealCard-parent {
+  display: flex;
   border: $test-border;
 }

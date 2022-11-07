@@ -57,7 +57,7 @@ const CardList = () => {
             {fat}{" "}
           </div>
         </div>
-        {mealCard}
+        <div className="meal-history">{mealCard}</div>
       </div>
     </div>
   );
