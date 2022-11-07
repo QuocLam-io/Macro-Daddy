@@ -16,16 +16,16 @@ const mealHistorySlice = createSlice({
       state.meals.push(action.payload);
     },
     increaseProtein: (state, action) => {
-      state.protein += action.payload;
+      state.protein += Math.round(action.payload);
     },
     increaseCarbs: (state, action) => {
-      state.carbs += action.payload;
+      state.carbs += Math.round(action.payload);
     },
     increaseFat: (state, action) => {
-      state.fat += action.payload;
+      state.fat += Math.round(action.payload);
     },
     increaseCalories: (state, action) => {
-      Math.round((state.calories += action.payload));
+      state.calories += Math.round(action.payload);
     },
   },
 });
