@@ -267,6 +267,7 @@ $test-border: 2px solid teal;
     // border: $test-border;
   }
   .macro-display {
+    z-index: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -311,7 +312,7 @@ $test-border: 2px solid teal;
       font-size: 2vw;
       // border: $test-border;
 
-      > *{
+      > * {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -319,4 +320,9 @@ $test-border: 2px solid teal;
       }
     }
   }
+}
+
+//* -------------------------------- MealCard -------------------------------- */
+.mealCard-parent{
+  
 }

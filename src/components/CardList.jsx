@@ -2,6 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import CommonCard from "./CommonCard";
 import BrandedCard from "./BrandedCard";
+import MealCard from "./MealCard";
 
 const CardList = () => {
   const { bmr } = useSelector((store) => store.userBio);
@@ -16,6 +17,10 @@ const CardList = () => {
 
   const brandedCard = branded.map((food) => {
     return <BrandedCard food={food} key={food.food_name} />;
+  });
+
+  const mealCard = meals.map((meal) => {
+    return <MealCard meal={meal} />;
   });
 
   return (
@@ -45,11 +50,14 @@ const CardList = () => {
           </div>
           <div>
             <div>Carbs</div>
-             {carbs} </div>
+            {carbs}{" "}
+          </div>
           <div>
             <div>Fats</div>
-            {fat} </div>
+            {fat}{" "}
+          </div>
         </div>
+        {mealCard}
       </div>
     </div>
   );
