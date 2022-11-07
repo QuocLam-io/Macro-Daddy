@@ -25,10 +25,16 @@ const mealHistorySlice = createSlice({
       state.fat += action.payload;
     },
     increaseCalories: (state, action) => {
-      state.calories += action.payload;
+      Math.round((state.calories += action.payload));
     },
   },
 });
 
-export const { addMeal, increaseCalories, increaseFat, increaseCarbs, increaseProtein } = mealHistorySlice.actions;
+export const {
+  addMeal,
+  increaseCalories,
+  increaseFat,
+  increaseCarbs,
+  increaseProtein,
+} = mealHistorySlice.actions;
 export default mealHistorySlice.reducer;

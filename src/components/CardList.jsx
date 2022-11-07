@@ -31,13 +31,24 @@ const CardList = () => {
           {calories}
           <span>Calories</span> / {bmr} <span>TDEE</span>
         </div>
-        <div className="bmr-difference">
-          {calories - bmr} {bmr > calories ? "Calorie Deficit" : "Weight gain"}
+        <div className="bmr-difference" style={{ fontSize: "2vw" }}>
+          {calories - bmr}
+          <span style={{ color: "green" }}>
+            &nbsp; Caloric&nbsp;
+            {bmr > calories ? "Deficit" : "Gainz"}
+          </span>
         </div>
         <div className="macro-counts">
-          <div className="display-protein">{protein} </div>
-          <div className="display-carbs"> {carbs} </div>
-          <div className="display-fats">{fat} </div>
+          <div>
+            <div>Protein</div>
+            {protein}
+          </div>
+          <div>
+            <div>Carbs</div>
+             {carbs} </div>
+          <div>
+            <div>Fats</div>
+            {fat} </div>
         </div>
       </div>
     </div>

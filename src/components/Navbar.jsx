@@ -29,6 +29,7 @@ const Navbar = () => {
         }
       )
       .then((res) => {
+        console.table(res.data);
         dispatch(setCommon(res.data.common));
         dispatch(setBranded(res.data.branded));
       })
@@ -36,30 +37,6 @@ const Navbar = () => {
         console.log(error);
       });
   };
-
-  // //! Call Common Axios
-  // const callCommonAxios = () => {
-  //   axios
-  //     .post(
-  //       `https://trackapi.nutritionix.com/v2/natural/nutrients/`,
-  //       {
-  //         //! Change: query: `${}`,
-  //       },
-  //       {
-  //         headers: {
-  //           "x-app-id": "40b82218",
-  //           "x-app-key": "0b053788ee5d2365587a6aa568240953",
-  //           "Content-Type": "application/json",
-  //         },
-  //       }
-  //     )
-  //     .then((res) => {
-  //       console.log(res.data);
-  //     })
-  //     .catch((error) => {
-  //       console.log(error);
-  //     });
-  // };
 
   //! Enter Button Function
   const handleKeyDown = (event) => {
