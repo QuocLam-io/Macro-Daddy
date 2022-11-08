@@ -322,10 +322,76 @@ $test-border: 2px solid teal;
       }
     }
   }
+
+  .meal-history {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 2vh;
+  }
 }
 
 //* -------------------------------- MealCard -------------------------------- */
 .mealCard-parent {
   display: flex;
-  border: $test-border;
+  width: 90%;
+  height: 15vh;
+  background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.14) 0%,
+      rgba(255, 255, 255, 0.14) 100%
+    ),
+    #121212;
+  animation: fadeInDown 1000ms forwards;
+  // border: $test-border;
+
+  @keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      transform: translateX(80px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  img {
+    width: 30%;
+  }
+  .mealCard-info {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+
+    .meal-name {
+      display: flex;
+      font-family: lexend;
+      font-size: 110%;
+      font-weight: 500;
+      height: 25%;
+      padding: 6%;
+      align-items: center;
+    }
+
+    .mealCard-macros {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      height: 75%;
+      padding: 2%;
+      font-family: lexend;
+      font-size: 110%;
+      font-weight: 200;
+      // border: $test-border;
+
+      > * {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        // border: $test-border;
+      }
+    }
+  }
 }

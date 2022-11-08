@@ -30,7 +30,7 @@ const CardList = () => {
         {brandedCard}
       </div>
 
-      <div className="macro-display">
+      <section className="macro-display">
         <p>MY DAILY MACROS</p>
         <div className="bmr-divide">
           {calories}
@@ -43,22 +43,24 @@ const CardList = () => {
             {bmr > calories ? "Deficit" : "Gainz"}
           </span>
         </div>
-        <div className="macro-counts">
+        <section className="macro-counts">
           <div>
             <div>Protein</div>
             {protein}
           </div>
           <div>
             <div>Carbs</div>
-            {carbs}{" "}
+            {carbs}
           </div>
           <div>
             <div>Fats</div>
-            {fat}{" "}
+            {fat}
           </div>
-        </div>
-        <div className="meal-history">{mealCard}</div>
-      </div>
+        </section>
+        <section className="meal-history">
+          {mealCard}
+        </section>
+      </section>
     </div>
   );
 };

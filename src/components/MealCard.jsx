@@ -1,18 +1,31 @@
 import React from "react";
 
-const MealCard = ({meal}) => {
-  return <div className="mealCard-parent">
-    <div className="mealCard-left">
+const MealCard = ({ meal }) => {
+  return (
+    <div className="mealCard-parent">
       <img src={meal.photo} alt="" />
+
+      <div className="mealCard-info">
+        <div className="meal-name">{meal.name}</div>
+        <div className="mealCard-macros">
+          <div>
+            <div>Calories</div>
+            {meal.calories}
+          </div>
+          <div>
+            <div>Protein</div>
+            {meal.fat}
+          </div>
+          <div>
+            <div>Carbs</div> {meal.protein}
+          </div>
+          <div>
+            <div>Fats</div> {meal.carbs}
+          </div>
+        </div>
+      </div>
     </div>
-    <div className="mealCard-right">
-      <p>{meal.name}</p>
-      <p>{meal.calories}</p>
-      <p>{meal.fat}</p>
-      <p>{meal.protein}</p>
-      <p>{meal.carbs}</p>
-    </div>
-  </div>;
+  );
 };
 
 export default MealCard;
