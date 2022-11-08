@@ -343,13 +343,13 @@ $test-border: 2px solid teal;
       rgba(255, 255, 255, 0.14) 100%
     ),
     #121212;
-  animation: fadeInDown 1000ms forwards;
+  animation: fadeIn 1000ms forwards;
   // border: $test-border;
 
-  @keyframes fadeInDown {
+  @keyframes fadeIn {
     0% {
       opacity: 0;
-      transform: translateX(80px);
+      transform: translateY(-40px);
     }
     100% {
       opacity: 1;
@@ -357,8 +357,11 @@ $test-border: 2px solid teal;
     }
   }
 
-  img {
+  .mealCard-img {
     width: 30%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
   .mealCard-info {
     width: 70%;

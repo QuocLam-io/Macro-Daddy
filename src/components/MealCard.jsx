@@ -3,7 +3,11 @@ import React from "react";
 const MealCard = ({ meal }) => {
   return (
     <div className="mealCard-parent">
-      <img src={meal.photo} alt="" />
+      <div
+        className="mealCard-img"
+        style={{ backgroundImage: `url(${meal.photo})` }}
+      ></div>
+      {/* <img src={meal.photo} alt="" /> */}
 
       <div className="mealCard-info">
         <div className="meal-name">{meal.name}</div>
