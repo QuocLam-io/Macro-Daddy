@@ -6,7 +6,9 @@ import MealCard from "./MealCard";
 
 const CardList = () => {
   const { bmr } = useSelector((store) => store.userBio);
-  const { common, branded } = useSelector((store) => store.searchResults);
+  const { common, branded, query } = useSelector(
+    (store) => store.searchResults
+  );
   const { meals, protein, carbs, fat, calories } = useSelector(
     (store) => store.mealHistory
   );
@@ -25,15 +27,25 @@ const CardList = () => {
 
   return (
     <div className="cardlist-parent">
-
-      {(common.length === 0 && branded.length === 0) ? (
+      {common.length === 0 && branded.length === 0 ? (
         <img className="plate" src="/imgs/plate.svg" alt="blub" />
       ) : (
         <div className="search-results-display">
-          <p>Search results for </p>
+          <p
+            style={{
+              fontSize: "1.5rem",
+              fontWeight: "bold",
+            }}
+          >
+            Search results for "{query}"
+          </p>
           <p>{common.length + branded.length} results</p>
-          {commonCard}
-          {brandedCard}
+          <div className="search-cards">
+            <p>Common Foods</p>
+            {commonCard}
+            <p>Brand Foods</p>
+            {brandedCard}
+          </div>
         </div>
       )}
 

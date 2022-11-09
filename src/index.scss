@@ -263,7 +263,7 @@ $test-border: 2px solid teal;
   height: 92vh;
   width: 100vw;
 
-  .plate{
+  .plate {
     width: 65vw;
     animation: intro 5000ms forwards;
 
@@ -279,10 +279,19 @@ $test-border: 2px solid teal;
 
   .search-results-display {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     overflow: scroll;
     width: 65%;
+    padding: 2.5%;
+    gap: 1%;
     // border: $test-border;
+
+
+    .search-cards {
+      display: flex;
+      flex-wrap: wrap;
+      border: $test-border;
+    }
   }
   .macro-display {
     z-index: 1;
