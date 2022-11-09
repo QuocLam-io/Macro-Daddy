@@ -36,7 +36,7 @@ const CommonCard = ({ food }) => {
         dispatch(
           addMeal({
             name:
-              food.food_name.charAt(0).toUpperCase() + food.food_name.slice(1),
+              food.food_name,
             type: "common",
             calories: nutrients.nf_calories,
             fat: nutrients.nf_total_fat,
@@ -55,7 +55,7 @@ const CommonCard = ({ food }) => {
   return (
     <div className="common-card-parent">
       <img src={food.photo.thumb} alt="" />
-      <p>{food.food_name.charAt(0).toUpperCase() + food.food_name.slice(1)}</p>
+      <p className="capitalized" >{food.food_name}</p>
       <button onClick={callCommonNutrients}>Submit</button>
     </div>
   );

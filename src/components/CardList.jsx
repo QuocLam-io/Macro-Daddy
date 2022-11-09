@@ -25,6 +25,9 @@ const CardList = () => {
 
   return (
     <div className="cardlist-parent">
+
+
+
       <div className="search-results-display">
         {commonCard}
         {brandedCard}
