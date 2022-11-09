@@ -286,9 +286,9 @@ $test-border: 2px solid teal;
     gap: 1%;
     // border: $test-border;
 
-
     .search-cards {
       display: flex;
+      flex-direction: column;
       flex-wrap: wrap;
       border: $test-border;
     }
@@ -357,6 +357,16 @@ $test-border: 2px solid teal;
     width: 100%;
     gap: 2vh;
   }
+}
+
+//* ------------------------------- Common Card ------------------------------ */
+.common-cards{
+  display: flex;
+  flex-wrap: wrap;
+}
+.common-card-parent {
+  width: 50%;
+  border: $test-border;
 }
 
 //* -------------------------------- MealCard -------------------------------- */

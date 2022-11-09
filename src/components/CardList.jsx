@@ -41,10 +41,22 @@ const CardList = () => {
           </p>
           <p>{common.length + branded.length} results</p>
           <div className="search-cards">
-            <p>Common Foods</p>
-            {commonCard}
-            <p>Brand Foods</p>
-            {brandedCard}
+            <p
+              style={{
+                textDecoration: "underline",
+              }}
+            >
+              Common Foods
+            </p>
+            <div className="common-cards">{commonCard}</div>
+            <p
+              style={{
+                textDecoration: "underline",
+              }}
+            >
+              Brand Foods
+            </p>
+            <div className="branded-cards">{brandedCard}</div>
           </div>
         </div>
       )}
