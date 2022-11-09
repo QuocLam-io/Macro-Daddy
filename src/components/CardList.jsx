@@ -25,10 +25,13 @@ const CardList = () => {
 
   return (
     <div className="cardlist-parent">
+
       {(common.length === 0 && branded.length === 0) ? (
         <img className="plate" src="/imgs/plate.svg" alt="blub" />
       ) : (
         <div className="search-results-display">
+          <p>Search results for </p>
+          <p>{common.length + branded.length} results</p>
           {commonCard}
           {brandedCard}
         </div>

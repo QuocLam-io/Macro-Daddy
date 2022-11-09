@@ -5,6 +5,7 @@ import axios from "axios";
 import {
   setBranded,
   setCommon,
+  setQuery,
 } from "../features/searchResults/searchResultsSlice";
 import { useDispatch } from "react-redux";
 
@@ -32,6 +33,7 @@ const Navbar = () => {
         console.table(res.data);
         dispatch(setCommon(res.data.common));
         dispatch(setBranded(res.data.branded));
+
       })
       .catch((error) => {
         console.log(error);
@@ -50,6 +52,7 @@ const Navbar = () => {
   const submitHandler = (e) => {
     e.preventDefault();
     callRecipeAxios();
+    dispatch(setQuery(searchQuery));
     setSearchQuery("");
   };
   //? -------------------------------------------------------------------------- */
