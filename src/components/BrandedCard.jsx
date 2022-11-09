@@ -32,13 +32,15 @@ const BrandedCard = ({ food }) => {
         dispatch(increaseCarbs(nutrients.nf_total_carbohydrate));
         dispatch(
           addMeal({
-            name: food.food_name,
+            name:
+              food.food_name.charAt(0).toUpperCase() + food.food_name.slice(1),
             type: "branded",
             calories: nutrients.nf_calories,
             fat: nutrients.nf_total_fat,
             protein: nutrients.nf_protein,
             carbs: nutrients.nf_total_carbohydrate,
             photo: nutrients.photo.thumb,
+            id: Math.random(),
           })
         );
       })
@@ -50,7 +52,7 @@ const BrandedCard = ({ food }) => {
   return (
     <div className="branded-card-parent">
       <img src={food.photo.thumb} alt="" />
-      <p>{food["food_name"]}</p>
+      <p>{food.food_name.charAt(0).toUpperCase() + food.food_name.slice(1)}</p>
       <button onClick={callBrandedNutrients}>Submit</button>
     </div>
   );

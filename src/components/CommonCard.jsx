@@ -6,7 +6,7 @@ import {
   increaseCalories,
   increaseFat,
   increaseCarbs,
-  increaseProtein
+  increaseProtein,
 } from "../features/mealHistory/mealHistorySlice";
 
 const CommonCard = ({ food }) => {
@@ -28,20 +28,24 @@ const CommonCard = ({ food }) => {
       )
       .then((res) => {
         // console.log(res.data.foods[0]);
-        let nutrients = res.data.foods[0]
-        dispatch(increaseCalories(nutrients.nf_calories))
-        dispatch(increaseFat(nutrients.nf_total_fat))
-        dispatch(increaseProtein(nutrients.nf_protein))
-        dispatch(increaseCarbs(nutrients.nf_total_carbohydrate))
-        dispatch(addMeal({
-          name: food.food_name,
-          type: "common",
-          calories: nutrients.nf_calories,
-          fat: nutrients.nf_total_fat,
-          protein: nutrients.nf_protein,
-          carbs: nutrients.nf_total_carbohydrate,
-          photo: nutrients.photo.thumb,
-        }))
+        let nutrients = res.data.foods[0];
+        dispatch(increaseCalories(nutrients.nf_calories));
+        dispatch(increaseFat(nutrients.nf_total_fat));
+        dispatch(increaseProtein(nutrients.nf_protein));
+        dispatch(increaseCarbs(nutrients.nf_total_carbohydrate));
+        dispatch(
+          addMeal({
+            name:
+              food.food_name.charAt(0).toUpperCase() + food.food_name.slice(1),
+            type: "common",
+            calories: nutrients.nf_calories,
+            fat: nutrients.nf_total_fat,
+            protein: nutrients.nf_protein,
+            carbs: nutrients.nf_total_carbohydrate,
+            photo: nutrients.photo.thumb,
+            id: Math.random(),
+          })
+        );
       })
       .catch((err) => {
         console.log(err);
@@ -51,7 +55,7 @@ const CommonCard = ({ food }) => {
   return (
     <div className="common-card-parent">
       <img src={food.photo.thumb} alt="" />
-      <p>{food["food_name"]}</p>
+      <p>{food.food_name.charAt(0).toUpperCase() + food.food_name.slice(1)}</p>
       <button onClick={callCommonNutrients}>Submit</button>
     </div>
   );

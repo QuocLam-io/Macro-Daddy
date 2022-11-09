@@ -15,6 +15,9 @@ const mealHistorySlice = createSlice({
     addMeal: (state, action) => {
       state.meals.push(action.payload);
     },
+    deleteMeal: (state, action) => {
+      state.meals = state.meals.filter((meal) => meal.id !== action.payload);
+    },
     increaseProtein: (state, action) => {
       state.protein += Math.round(action.payload);
     },
@@ -32,6 +35,7 @@ const mealHistorySlice = createSlice({
 
 export const {
   addMeal,
+  deleteMeal,
   increaseCalories,
   increaseFat,
   increaseCarbs,
