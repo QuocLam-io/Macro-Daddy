@@ -263,6 +263,20 @@ $test-border: 2px solid teal;
   height: 92vh;
   width: 100vw;
 
+  .plate{
+    width: 65vw;
+    animation: intro 5000ms forwards;
+
+    @keyframes intro {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  }
+
   .search-results-display {
     display: flex;
     flex-wrap: wrap;

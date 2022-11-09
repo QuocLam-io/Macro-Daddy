@@ -25,13 +25,14 @@ const CardList = () => {
 
   return (
     <div className="cardlist-parent">
-
-
-
-      <div className="search-results-display">
-        {commonCard}
-        {brandedCard}
-      </div>
+      {(common.length === 0 && branded.length === 0) ? (
+        <img className="plate" src="/imgs/plate.svg" alt="blub" />
+      ) : (
+        <div className="search-results-display">
+          {commonCard}
+          {brandedCard}
+        </div>
+      )}
 
       <section className="macro-display">
         <p>MY DAILY MACROS</p>
@@ -60,9 +61,7 @@ const CardList = () => {
             {fat}
           </div>
         </section>
-        <section className="meal-history">
-          {mealCard}
-        </section>
+        <section className="meal-history">{mealCard}</section>
       </section>
     </div>
   );
