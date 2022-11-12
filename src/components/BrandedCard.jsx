@@ -32,8 +32,7 @@ const BrandedCard = ({ food }) => {
         dispatch(increaseCarbs(nutrients.nf_total_carbohydrate));
         dispatch(
           addMeal({
-            name:
-              food.food_name,
+            name: food.food_name,
             type: "branded",
             calories: nutrients.nf_calories,
             fat: nutrients.nf_total_fat,
@@ -52,8 +51,10 @@ const BrandedCard = ({ food }) => {
   return (
     <div className="branded-card-parent">
       <img src={food.photo.thumb} alt="" />
-      <p className="capitalized" >{food.food_name}</p>
-      <button onClick={callBrandedNutrients}>Submit</button>
+      <div className="card-right">
+        <p className="capitalized">{food.food_name}</p>
+        <button onClick={callBrandedNutrients}>ADD</button>
+      </div>
     </div>
   );
 };
