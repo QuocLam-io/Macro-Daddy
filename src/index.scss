@@ -290,6 +290,7 @@ $test-border: 2px solid teal;
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
+      margin-top: 1rem;
       gap: 1rem;
       // border: $test-border;
     }
@@ -368,10 +369,11 @@ $test-border: 2px solid teal;
   justify-content: space-between;
   align-items: center;
   width: 60%;
-  padding: 7%;
-  border: #ffa726 2px solid;
+  padding: 5%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.14) 0%, rgba(255, 255, 255, 0.14) 100%), #121212;
+  // border: #ffa726 2px solid;
 
-  p{
+  p {
     font-size: 1.5vw;
   }
 
@@ -380,7 +382,6 @@ $test-border: 2px solid teal;
     justify-content: center;
     align-items: center;
     width: 6vw;
-    height: 32px;
     height: 3vh;
     background: #ffa726;
     border: none;
@@ -413,7 +414,6 @@ $test-border: 2px solid teal;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-
 }
 .branded-card-parent {
   display: flex;
@@ -459,18 +459,22 @@ $test-border: 2px solid teal;
     background-repeat: no-repeat;
   }
   .mealCard-info {
-    width: 70%;
     display: flex;
     flex-direction: column;
+    padding: 3%;
+    justify-content: space-between;
+    width: 70%;
 
     .meal-name {
       display: flex;
       justify-content: space-between;
       font-family: lexend;
+      text-transform: capitalize;
+
       font-size: 110%;
       font-weight: 500;
       height: 25%;
-      padding: 4%;
+      // padding: 4%;
       align-items: center;
       // border: $test-border;
     }
@@ -478,9 +482,10 @@ $test-border: 2px solid teal;
     .mealCard-macros {
       display: flex;
       justify-content: space-between;
+      align-items: center;
       width: 100%;
       height: 75%;
-      padding: 2%;
+      // padding: 2%;
       font-family: lexend;
       font-size: 110%;
       font-weight: 200;
