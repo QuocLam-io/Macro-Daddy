@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import CommonCard from "./CommonCard";
 import BrandedCard from "./BrandedCard";
 import MealCard from "./MealCard";
 
 const CardList = () => {
+  //? ----------------------------- Store Variables ---------------------------- */
   const { bmr } = useSelector((store) => store.userBio);
   const { common, branded, query } = useSelector(
     (store) => store.searchResults
@@ -12,12 +13,17 @@ const CardList = () => {
   const { meals, protein, carbs, fat, calories } = useSelector(
     (store) => store.mealHistory
   );
-
-  const commonCard = common.map((food) => {
+  //? --------------------------- UseState Variables --------------------------- */
+  const [numOfCommon, setNumOfCommon] = useState(4);
+  const [numOfBranded, setNumOfBranded] = useState(4);
+  const commonSlice = common.slice(0, numOfCommon);
+  const brandedSlice = branded.slice(0, numOfBranded);
+  //? -------------------------------------------------------------------------- */
+  const commonCard = commonSlice.map((food) => {
     return <CommonCard food={food} key={food.food_name} />;
   });
 
-  const brandedCard = branded.map((food) => {
+  const brandedCard = brandedSlice.map((food) => {
     return <BrandedCard food={food} key={food.food_name} />;
   });
 
