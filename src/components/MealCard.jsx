@@ -33,13 +33,13 @@ const MealCard = ({ meal }) => {
           </div>
           <div>
             <div>Protein</div>
-            {meal.fat}
+            {meal.protein}
           </div>
           <div>
-            <div>Carbs</div> {meal.protein}
+            <div>Carbs</div> {meal.carbs}
           </div>
           <div>
-            <div>Fats</div> {meal.carbs}
+            <div>Fats</div> {meal.fat}
           </div>
         </div>
       </div>
