@@ -354,6 +354,7 @@ $test-border: 2px solid teal;
 
   .meal-history {
     display: flex;
+    overflow-y: scroll;
     flex-direction: column;
     align-items: center;
     width: 100%;
