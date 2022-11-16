@@ -18,22 +18,25 @@ const mealHistorySlice = createSlice({
     deleteMeal: (state, action) => {
       state.meals = state.meals.filter((meal) => meal.id !== action.payload);
     },
-    // increaseProtein: (state, action) => {
-    //   state.protein += Math.round(action.payload);
-    // },
     increaseProtein: (state) => {
       state.protein = state.meals.reduce((acc, meal) => {
         return acc + meal.protein;
       }, 0);
     },
     increaseCarbs: (state, action) => {
-      state.carbs += Math.round(action.payload);
+      state.carbs = state.meals.reduce((acc, meal) => {
+        return acc + meal.carbs;
+      }, 0);
     },
     increaseFat: (state, action) => {
-      state.fat += Math.round(action.payload);
+      state.fat = state.meals.reduce((acc, meal) => {
+        return acc + meal.fat;
+      }, 0);
     },
     increaseCalories: (state, action) => {
-      state.calories += Math.round(action.payload);
+      state.calories = state.meals.reduce((acc, meal) => {
+        return acc + meal.calories;
+      }, 0);
     },
   },
 });
