@@ -26,10 +26,6 @@ const BrandedCard = ({ food }) => {
       .then((res) => {
         console.log(res.data);
         let nutrients = res.data.foods[0];
-        dispatch(increaseCalories(nutrients.nf_calories));
-        dispatch(increaseFat(nutrients.nf_total_fat));
-        dispatch(increaseProtein(nutrients.nf_protein));
-        dispatch(increaseCarbs(nutrients.nf_total_carbohydrate));
         dispatch(
           addMeal({
             name: food.food_name,
@@ -42,6 +38,10 @@ const BrandedCard = ({ food }) => {
             id: Math.random(),
           })
         );
+        dispatch(increaseCalories(nutrients.nf_calories));
+        dispatch(increaseFat(nutrients.nf_total_fat));
+        dispatch(increaseProtein(nutrients.nf_protein));
+        dispatch(increaseCarbs(nutrients.nf_total_carbohydrate));
       })
       .catch((err) => {
         console.log(err);

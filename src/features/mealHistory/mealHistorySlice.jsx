@@ -20,7 +20,7 @@ const mealHistorySlice = createSlice({
     },
     increaseProtein: (state) => {
       state.protein = state.meals.reduce((acc, meal) => {
-        let num = acc + meal.carbs;
+        let num = acc + meal.protein;
         return Math.round(num * 100) / 100
       }, 0);
     },
@@ -32,13 +32,13 @@ const mealHistorySlice = createSlice({
     },
     increaseFat: (state, action) => {
       state.fat = state.meals.reduce((acc, meal) => {
-        let num = acc + meal.carbs;
+        let num = acc + meal.fat;
         return Math.round(num * 100) / 100
       }, 0);
     },
     increaseCalories: (state, action) => {
       state.calories = state.meals.reduce((acc, meal) => {
-        let num = acc + meal.carbs;
+        let num = acc + meal.calories;
         return Math.round(num * 100) / 100
       }, 0);
     },
