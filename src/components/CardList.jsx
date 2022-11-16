@@ -54,7 +54,10 @@ const CardList = () => {
             >
               Common Foods
             </p>
-            <div className="common-cards">{commonCard}</div>
+            <div className="common-cards">
+              {commonCard}
+              <button>Load More Results</button>
+            </div>
             <p
               style={{
                 textDecoration: "underline",
@@ -62,7 +65,10 @@ const CardList = () => {
             >
               Brand Foods
             </p>
-            <div className="branded-cards">{brandedCard}</div>
+            <div className="branded-cards">
+              {brandedCard}
+              <button>Load More Results</button>
+            </div>
           </div>
         </div>
       )}
