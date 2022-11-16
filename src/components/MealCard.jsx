@@ -1,9 +1,21 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { deleteMeal } from "../features/mealHistory/mealHistorySlice";
+import {
+  deleteMeal,
+  increaseCalories,
+  increaseCarbs,
+  increaseFat,
+  increaseProtein,
+} from "../features/mealHistory/mealHistorySlice";
 
 const MealCard = ({ meal }) => {
   const dispatch = useDispatch();
+  const updateMacros = () => {
+    dispatch(increaseCalories(meal.calories));
+    dispatch(increaseCarbs(meal.carbs));
+    dispatch(increaseFat(meal.fat));
+    dispatch(increaseProtein(meal.protein));
+  };
 
   return (
     <div className="mealCard-parent">
@@ -15,7 +27,10 @@ const MealCard = ({ meal }) => {
         <div className="meal-name">
           {meal.name}
           <div
-            onClick={()=>{dispatch(deleteMeal(meal.id))}}
+            onClick={() => {
+              dispatch(deleteMeal(meal.id));
+              updateMacros();
+            }}
             style={{
               fontSize: "1.5rem",
               color: "grey",
