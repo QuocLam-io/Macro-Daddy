@@ -9,7 +9,9 @@ import {
 } from "../features/searchResults/searchResultsSlice";
 import { useDispatch } from "react-redux";
 
-const Navbar = () => {
+const Navbar = (
+  { setNumOfCommon, setNumOfBranded } 
+) => {
   const { signedIn } = useSelector((store) => store.userBio);
   const [searchQuery, setSearchQuery] = useState("");
   const dispatch = useDispatch();
@@ -33,7 +35,8 @@ const Navbar = () => {
         console.table(res.data);
         dispatch(setCommon(res.data.common));
         dispatch(setBranded(res.data.branded));
-
+        setNumOfBranded(4);
+        setNumOfCommon(4);
       })
       .catch((error) => {
         console.log(error);
