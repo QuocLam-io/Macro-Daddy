@@ -62,7 +62,7 @@ const CardList = () => {
                   setNumOfCommon(numOfCommon + 4);
                 }}
               >
-{common.length > numOfCommon ? "Load More Results" : ""}
+{common.length > numOfCommon ? "Load More Results ▾" : ""}
 
 
               </button>
@@ -83,7 +83,7 @@ const CardList = () => {
                   setNumOfBranded(numOfBranded + 4);
                 }}
               >
-                {branded.length > numOfBranded ? "Load More Results" : ""}
+                {branded.length > numOfBranded ? "Load More Results ▾" : ""}
 
               </button>
             </div>
