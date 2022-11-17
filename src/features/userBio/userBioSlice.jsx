@@ -8,7 +8,7 @@ const initialState = {
   weight: 0,
   activityLevel: 0,
   bmr: 0,
-  signedIn: true,
+  signedIn: false,
 };
 
 const userBioSlice = createSlice({

@@ -9,7 +9,7 @@ import {
   calculateBMR,
   setSignedIn,
 } from "../features/userBio/userBioSlice";
-import { useDispatch} from "react-redux";
+import { useDispatch } from "react-redux";
 
 const LandingPage = () => {
   const [form, setForm] = useState(false);
@@ -45,11 +45,20 @@ const LandingPage = () => {
             dispatch(setName(e.target[0].value));
             dispatch(setAge(parseInt(e.target[1].value)));
             dispatch(setSex(e.target[2].value));
-            dispatch(setHeight(parseInt(e.target[3].value)));
+            dispatch(
+              setHeight(
+                parseInt(e.target[3].value) * 12 + parseInt(e.target[4].value)
+              )
+            );
             dispatch(setWeight(parseInt(e.target[4].value)));
             dispatch(setActivityLevel(parseFloat(e.target[5].value)));
             dispatch(calculateBMR());
             dispatch(setSignedIn());
+            console.log(e.target[0]);
+            console.log(e.target[1]);
+            console.log(e.target[2]);
+            console.log(e.target[3]);
+            console.log(e.target[4]);
           }}
         >
           <p>CREATE YOUR PROFILE</p>
@@ -72,9 +81,34 @@ const LandingPage = () => {
             </option>
             <option value="female">Female</option>
           </select>
-          <input required type="number" placeholder="Height (Inches)" />
+          <div className="height">
+            <div className="empty" style={{ display: "none" }}></div>
+            <input required type="number" placeholder="Height (Feet)" />
+            <select required defaultValue={"DEFAULT"} name="inches" id="inches">
+              <option disabled value="" className="grey-text">
+                Inches
+              </option>
+              <option value="0">0"</option>
+              <option value="1">1"</option>
+              <option value="2">2"</option>
+              <option value="3">3"</option>
+              <option value="4">4"</option>
+              <option value="5">5"</option>
+              <option value="6">6"</option>
+              <option value="7">7"</option>
+              <option value="8">8"</option>
+              <option value="9">9"</option>
+              <option value="10">10"</option>
+              <option value="11">11"</option>
+            </select>
+          </div>
           <input required type="number" placeholder="Weight (Pounds)" />
-          <select required defaultValue={"DEFAULT"} name="physical" id="physical">
+          <select
+            required
+            defaultValue={"DEFAULT"}
+            name="physical"
+            id="physical"
+          >
             <option value="" disabled>
               Activity Level{" "}
             </option>
