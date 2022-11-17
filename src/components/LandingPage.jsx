@@ -121,7 +121,7 @@ const LandingPage = () => {
             <option value="1.9">Lean Meat: Exercise 7+/week 🦁</option>
           </select>
           <button className="submit-btn" type="submit">
-            LET'S GOOOO
+            LET'S GOOOO!
           </button>
         </form>
       )}

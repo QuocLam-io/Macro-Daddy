@@ -178,7 +178,6 @@ $test-border: 2px solid teal;
       background: transparent;
       width: 100%;
       color: $semi-white;
-      padding: 0;
       cursor: pointer;
       // border: $test-border;
 
@@ -277,6 +276,7 @@ $test-border: 2px solid teal;
     background: #ffa726;
     border: none;
     cursor: pointer;
+    margin-top: 2vh;
   }
 }
 
