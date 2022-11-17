@@ -50,13 +50,14 @@ const CardList = () => {
             <p
               style={{
                 textDecoration: "underline",
+                fontSize: "1.4rem",
               }}
             >
               Common Foods
             </p>
             <div className="common-cards">
               {commonCard}
-              <button
+              <button className="card-btn"
                 onClick={() => {
                   setNumOfCommon(numOfCommon + 4);
                 }}
@@ -67,6 +68,7 @@ const CardList = () => {
             <p
               style={{
                 textDecoration: "underline",
+                fontSize: "1.4rem",
               }}
             >
               Brand Foods
@@ -74,6 +76,7 @@ const CardList = () => {
             <div className="branded-cards">
               {brandedCard}
               <button
+              className="card-btn"
                 onClick={() => {
                   setNumOfBranded(numOfBranded + 4);
                 }}
