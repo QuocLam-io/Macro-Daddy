@@ -100,7 +100,7 @@ const CardList = ({
           {calories - bmr}
           <span style={{ color: "green" }}>
             &nbsp; Caloric&nbsp;
-            {bmr > calories ? "Deficit" : "Gainz"}
+            {bmr > calories ? "Deficit" : "Gainz!"}
           </span>
         </div>
         <section className="macro-counts">
