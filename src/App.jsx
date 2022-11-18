@@ -10,12 +10,14 @@ function App() {
   const { signedIn } = useSelector((store) => store.userBio);
   const [numOfCommon, setNumOfCommon] = useState(4);
   const [numOfBranded, setNumOfBranded] = useState(4);
+  const [userPageMounted, setUserPageMounted] = useState(false);
 
   return (
     <div className="App">
       <Navbar
         setNumOfCommon={setNumOfCommon}
         setNumOfBranded={setNumOfBranded}
+        userPageMounted={userPageMounted}
       />
       <Routes>
         <Route
@@ -33,7 +35,9 @@ function App() {
             )
           }
         ></Route>
-        <Route path="/userpage" element={<UserPage />} />
+        <Route path="/userpage" element={<UserPage 
+        setUserPageMounted={setUserPageMounted}
+        />} />
       </Routes>
     </div>
   );

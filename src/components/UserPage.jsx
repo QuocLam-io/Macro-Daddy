@@ -1,9 +1,14 @@
-import React from 'react'
+import React, { useEffect } from "react";
 
-const UserPage = () => {
-  return (
-    <div>UserPage</div>
-  )
-}
+const UserPage = ({ setUserPageMounted }) => {
+  useEffect(() => {
+    setUserPageMounted(true);
+    return () => {
+      setUserPageMounted(false);
+    };
+  }, [setUserPageMounted]);
 
-export default UserPage
+  return <div>UserPage</div>;
+};
+
+export default UserPage;

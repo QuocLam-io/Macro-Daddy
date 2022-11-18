@@ -8,8 +8,9 @@ import {
   setQuery,
 } from "../features/searchResults/searchResultsSlice";
 import { useDispatch } from "react-redux";
+import UserPage from "./UserPage";
 
-const Navbar = ({ setNumOfCommon, setNumOfBranded }) => {
+const Navbar = ({ setNumOfCommon, setNumOfBranded, userPageMounted }) => {
   const { signedIn } = useSelector((store) => store.userBio);
   const [searchQuery, setSearchQuery] = useState("");
   const dispatch = useDispatch();
@@ -94,7 +95,9 @@ const Navbar = ({ setNumOfCommon, setNumOfBranded }) => {
 
       {signedIn && (
         <Link className="user-page-btn" to="userpage">
-          <img className="merp" src="/imgs/merp.svg" alt="" />
+          {userPageMounted ? undefined : (
+            <img className="merp" src="/imgs/merp.svg" alt="" />
+          )}
           MY MACROS
         </Link>
       )}
