@@ -9,9 +9,7 @@ import {
 } from "../features/searchResults/searchResultsSlice";
 import { useDispatch } from "react-redux";
 
-const Navbar = (
-  { setNumOfCommon, setNumOfBranded } 
-) => {
+const Navbar = ({ setNumOfCommon, setNumOfBranded }) => {
   const { signedIn } = useSelector((store) => store.userBio);
   const [searchQuery, setSearchQuery] = useState("");
   const dispatch = useDispatch();
@@ -95,7 +93,8 @@ const Navbar = (
       )}
 
       {signedIn && (
-        <Link className="user-page" to="userpage">
+        <Link className="user-page-btn" to="userpage">
+          <img className="merp" src="/imgs/merp.svg" alt="" />
           MY MACROS
         </Link>
       )}

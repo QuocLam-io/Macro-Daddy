@@ -97,18 +97,24 @@ $test-border: 2px solid teal;
       // border: $test-border;
     }
   }
-  .user-page {
-    color: black;
-    // border: white 1px solid;
-    height: 2.1rem;
+  .user-page-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    height: 3rem;
+    font-size: 2.4vh;
+    padding: 8px;
+    border: #ffa726 2px solid;
+    border-radius: 100px;
+    // &:hover {
+    //   color: black;
+    //   background: white;
+    //   border-radius: 2px;
+    // }
 
-    padding: 5px;
-    border-radius: 5px;
-    background: #ffa726;
-    &:hover {
-      color: black;
-      background: white;
-      border-radius: 2px;
+    .merp{
+      height: 100%;
     }
   }
 }
