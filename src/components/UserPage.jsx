@@ -8,7 +8,14 @@ const UserPage = ({ setUserPageMounted }) => {
     };
   }, [setUserPageMounted]);
 
-  return <div>UserPage</div>;
+  return <div className="userpage-parent" >
+    <div className="userpage-left">
+      <div className="test-box">blub</div>
+    </div>
+    <div className="userpage-right">right</div>
+
+
+  </div>;
 };
 
 export default UserPage;

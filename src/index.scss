@@ -113,7 +113,7 @@ $test-border: 2px solid teal;
     //   border-radius: 2px;
     // }
 
-    .merp{
+    .merp {
       height: 100%;
     }
   }
@@ -214,7 +214,7 @@ $test-border: 2px solid teal;
         transform: translateX(0);
       }
     }
-    .height{
+    .height {
       display: flex;
       width: 60%;
       gap: 1vw;
@@ -229,7 +229,7 @@ $test-border: 2px solid teal;
           rgba(255, 255, 255, 0.09) 0%,
           rgba(255, 255, 255, 0.09) 100%
         );
-  
+
         background: transparent;
         border: none;
         border-bottom: 1px solid rgba(255, 255, 255, 0.6);
@@ -436,7 +436,6 @@ $test-border: 2px solid teal;
   flex-wrap: wrap;
   justify-content: space-between;
   // border: $test-border;
-
 }
 .card-btn {
   display: block;
@@ -562,5 +561,29 @@ $test-border: 2px solid teal;
         // border: $test-border;
       }
     }
+  }
+}
+
+//* -------------------------------- User Page ------------------------------- */
+
+.userpage-parent {
+  display: flex;
+  border: $test-border;
+
+  .userpage-left {
+    display: flex;
+    width: 50%;
+    border: orange 2px solid;
+
+    .test-box{
+      background: orange;
+    }
+  }
+
+
+  .userpage-right {
+    display: flex;
+    width: 50%;
+    border: orange 2px solid;
   }
 }

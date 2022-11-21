@@ -8,7 +8,6 @@ import {
   setQuery,
 } from "../features/searchResults/searchResultsSlice";
 import { useDispatch } from "react-redux";
-import UserPage from "./UserPage";
 
 const Navbar = ({ setNumOfCommon, setNumOfBranded, userPageMounted }) => {
   const { signedIn } = useSelector((store) => store.userBio);
