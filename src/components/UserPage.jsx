@@ -14,6 +14,9 @@ const UserPage = ({ setUserPageMounted }) => {
         <div className="user-daily-macro">
           <div className="test-box"></div>
         </div>
+        <div className="user-name">
+        <img className="plate" src="/imgs/merp.svg" alt="blub" />
+        </div>
       </div>
       <div className="userpage-right">
         <p>Your Meals Today</p>

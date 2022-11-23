@@ -572,6 +572,8 @@ $test-border: 2px solid teal;
 
   .userpage-left {
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     height: 92vh;
     width: 50%;
     padding: 2.5%;
@@ -589,12 +591,12 @@ $test-border: 2px solid teal;
         ),
         #121212;
       // border: $test-border;
+    }
 
-      .test-box{
-        width: 100%;
-        height: 100%;
-        // border: $test-border;
-      }
+    .user-name{
+      display: flex;
+      height: 12%;
+      border: $test-border;
     }
   }
 
