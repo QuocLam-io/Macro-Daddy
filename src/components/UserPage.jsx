@@ -10,9 +10,11 @@ const UserPage = ({ setUserPageMounted }) => {
 
   return <div className="userpage-parent" >
     <div className="userpage-left">
-      <div className="test-box">blub</div>
+      <div className="user-daily-macro">blub</div>
     </div>
-    <div className="userpage-right">right</div>
+    <div className="userpage-right">
+      
+    </div>
 
 
   </div>;
