@@ -581,6 +581,8 @@ $test-border: 2px solid teal;
     // border: orange 2px solid;
 
     .user-daily-macro {
+      display: flex;
+      flex-direction: column;
       height: 57%;
       width: 100%;
       padding: 24px;
@@ -590,7 +592,39 @@ $test-border: 2px solid teal;
           rgba(255, 255, 255, 0.11) 100%
         ),
         #121212;
-      // border: $test-border;
+        gap: 3vh;
+        // border: $test-border;
+
+      > * {
+        border: $test-border;
+      }
+
+      .user-daily-macro-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        // height: 20%;
+        // border: $test-border;
+
+        :first-child {
+          font-size: 1.11vw;
+          color: rgba(255, 255, 255, 0.7);
+        }
+        :last-child {
+          font-family: "Koulen";
+          display: inline-block;
+          font-size: 40px;
+          line-height: 48px;
+          letter-spacing: 1.5px;
+        }
+      }
+
+      .user-daily-macro-body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1vw;
+      }
     }
 
     .user-name {
@@ -622,9 +656,9 @@ $test-border: 2px solid teal;
     width: 50%;
     padding: 2.5% 5% 0% 1.5%;
     gap: 4%;
-    border: orange 2px solid;
+    // border: orange 2px solid;
 
-    p {
+    > :first-child {
       font-family: "Koulen";
       font-size: 2.22vw;
       line-height: 5.8vh;
@@ -633,9 +667,16 @@ $test-border: 2px solid teal;
 
     .user-meals {
       display: flex;
+      flex-direction: column;
       width: 100%;
       height: 100%;
-      border: $test-border;
+      overflow-y: scroll;
+      gap: 5%;
+      // border: $test-border;
+
+      > * {
+        width: 100%;
+      }
     }
   }
 }

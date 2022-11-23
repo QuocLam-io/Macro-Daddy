@@ -1,9 +1,15 @@
 import React, { useEffect } from "react";
+import { useSelector } from "react-redux";
 import moment from "moment";
+import MealCard from "./MealCard";
 
 const UserPage = ({ setUserPageMounted }) => {
+  const { meals, protein, carbs, fat, calories } = useSelector(
+    (store) => store.mealHistory
+  );
+  const { bmr } = useSelector((store) => store.userBio);
 
-let theDate = moment().format("MMM Do, YYYY");
+  let theDate = moment().format("MMM Do, YYYY");
 
   useEffect(() => {
     setUserPageMounted(true);
@@ -12,10 +18,27 @@ let theDate = moment().format("MMM Do, YYYY");
     };
   }, [setUserPageMounted]);
 
+  const mealCard = meals.map((meal) => {
+    return <MealCard meal={meal} />;
+  });
+
   return (
     <div className="userpage-parent">
       <div className="userpage-left">
-        <div className="user-daily-macro"></div>
+        <div className="user-daily-macro">
+          <div className="user-daily-macro-header">
+            <p>{moment().format("ddd, MMM Do")}</p>
+            <p >Daily Macros</p>
+          </div>
+          <div className="user-daily-macro-body">
+            {calories}
+            <span>Calories</span>
+            <span>/</span>
+            {bmr}
+            <span>TDEE</span>
+          </div>
+          <div className="user-daily-macro-footer"></div>
+        </div>
         <div className="user-name">
           <img className="plate" src="/imgs/merp.svg" alt="blub" />
           <div>
@@ -26,7 +49,7 @@ let theDate = moment().format("MMM Do, YYYY");
       </div>
       <div className="userpage-right">
         <p>Your Meals Today</p>
-        <div className="user-meals"></div>
+        <div className="user-meals">{mealCard}</div>
       </div>
     </div>
   );
