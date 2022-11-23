@@ -595,9 +595,9 @@ $test-border: 2px solid teal;
       gap: 3vh;
       // border: $test-border;
 
-      > * {
-        border: $test-border;
-      }
+      // > * {
+      //   border: $test-border;
+      // }
 
       .user-daily-macro-header {
         display: flex;
@@ -623,7 +623,7 @@ $test-border: 2px solid teal;
       .user-daily-macro-body {
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: baseline;
         gap: 1vw;
         font-size: 3vw;
         line-height: 72px;
@@ -644,11 +644,23 @@ $test-border: 2px solid teal;
         :first-child {
           font-size: 2vw;
         }
-        
       }
 
       .user-daily-macro-footer {
         display: flex;
+        justify-content: space-between;
+
+        div{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 1vh;
+          font-size: 1.2vw;
+
+          :nth-child(2){
+            font-size: 1.9vw;
+          }
+        }
       }
     }
 

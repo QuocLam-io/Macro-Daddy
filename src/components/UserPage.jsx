@@ -45,8 +45,18 @@ const UserPage = ({ setUserPageMounted }) => {
             </span>
           </div>
           <div className="user-daily-macro-footer">
-
-            
+            <div className="">
+              <p>Protein</p>
+              <p>{protein}</p>
+            </div>
+            <div className="">
+              <p>Carbs</p>
+              <p>{carbs}</p>
+            </div>
+            <div className="">
+              <p>Fats</p>
+              <p>{fat}</p>
+            </div>
           </div>
         </div>
         <div className="user-name">
