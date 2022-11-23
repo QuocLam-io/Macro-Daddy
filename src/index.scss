@@ -576,20 +576,49 @@ $test-border: 2px solid teal;
     width: 50%;
     padding: 2.5%;
     padding-left: 5%;
-    border: orange 2px solid;
+    // border: orange 2px solid;
 
-    .user-daily-macro{
-      height: 36%;
+    .user-daily-macro {
+      height: 57%;
       width: 100%;
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0.11) 0%, rgba(255, 255, 255, 0.11) 100%), #121212;
+      padding: 24px;
+      background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.11) 0%,
+          rgba(255, 255, 255, 0.11) 100%
+        ),
+        #121212;
       // border: $test-border;
+
+      .test-box{
+        width: 100%;
+        height: 100%;
+        // border: $test-border;
+      }
     }
   }
 
-
   .userpage-right {
     display: flex;
+    flex-direction: column;
+    height: 92vh;
     width: 50%;
+    padding: 2.5% 5% 0% 1.5%;
+    gap: 4%;
     border: orange 2px solid;
+
+    p {
+      font-family: "Koulen";
+      font-size: 2.22vw;
+      line-height: 5.8vh;
+      letter-spacing: 1.5px;
+    }
+
+    .user-meals {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      border: $test-border;
+    }
   }
 }

@@ -8,16 +8,19 @@ const UserPage = ({ setUserPageMounted }) => {
     };
   }, [setUserPageMounted]);
 
-  return <div className="userpage-parent" >
-    <div className="userpage-left">
-      <div className="user-daily-macro">blub</div>
+  return (
+    <div className="userpage-parent">
+      <div className="userpage-left">
+        <div className="user-daily-macro">
+          <div className="test-box"></div>
+        </div>
+      </div>
+      <div className="userpage-right">
+        <p>Your Meals Today</p>
+        <div className="user-meals"></div>
+      </div>
     </div>
-    <div className="userpage-right">
-      
-    </div>
-
-
-  </div>;
+  );
 };
 
 export default UserPage;
