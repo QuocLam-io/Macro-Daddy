@@ -583,7 +583,7 @@ $test-border: 2px solid teal;
     .user-daily-macro {
       display: flex;
       flex-direction: column;
-      height: 57%;
+      // height: 57%;
       width: 100%;
       padding: 24px;
       background: linear-gradient(
@@ -592,8 +592,8 @@ $test-border: 2px solid teal;
           rgba(255, 255, 255, 0.11) 100%
         ),
         #121212;
-        gap: 3vh;
-        // border: $test-border;
+      gap: 3vh;
+      // border: $test-border;
 
       > * {
         border: $test-border;
@@ -603,6 +603,7 @@ $test-border: 2px solid teal;
         display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 1vh;
         // height: 20%;
         // border: $test-border;
 
@@ -613,7 +614,7 @@ $test-border: 2px solid teal;
         :last-child {
           font-family: "Koulen";
           display: inline-block;
-          font-size: 40px;
+          font-size: 2.5vw;
           line-height: 48px;
           letter-spacing: 1.5px;
         }
@@ -624,6 +625,30 @@ $test-border: 2px solid teal;
         justify-content: center;
         align-items: center;
         gap: 1vw;
+        font-size: 3vw;
+        line-height: 72px;
+        letter-spacing: 1.5px;
+
+        div {
+          font-size: 1.2vw;
+        }
+      }
+
+      .user-daily-macro-difference {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 1.2vw;
+
+        :first-child {
+          font-size: 2vw;
+        }
+        
+      }
+
+      .user-daily-macro-footer {
+        display: flex;
       }
     }
 

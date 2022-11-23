@@ -28,16 +28,26 @@ const UserPage = ({ setUserPageMounted }) => {
         <div className="user-daily-macro">
           <div className="user-daily-macro-header">
             <p>{moment().format("ddd, MMM Do")}</p>
-            <p >Daily Macros</p>
+            <p>My Daily Macros</p>
           </div>
           <div className="user-daily-macro-body">
-            {calories}
-            <span>Calories</span>
+            <span>{calories}</span>
+            <div>Calories</div>
             <span>/</span>
-            {bmr}
-            <span>TDEE</span>
+            <span>{bmr}</span>
+            <div>TDEE</div>
           </div>
-          <div className="user-daily-macro-footer"></div>
+          <div className="user-daily-macro-difference">
+            <div>{calories - bmr}</div>
+            <span>
+              &nbsp; Caloric&nbsp;
+              {bmr > calories ? "Deficit" : "Gainz!"}
+            </span>
+          </div>
+          <div className="user-daily-macro-footer">
+
+            
+          </div>
         </div>
         <div className="user-name">
           <img className="plate" src="/imgs/merp.svg" alt="blub" />
