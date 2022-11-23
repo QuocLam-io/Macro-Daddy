@@ -593,10 +593,25 @@ $test-border: 2px solid teal;
       // border: $test-border;
     }
 
-    .user-name{
+    .user-name {
       display: flex;
       height: 12%;
-      border: $test-border;
+      gap: 2%;
+      // border: $test-border;
+
+      div {
+        :first-child {
+          font-family: "Koulen";
+          font-size: 2.22vw;
+          line-height: 5.8vh;
+          letter-spacing: 1.5px;
+        }
+
+        :first-child + p {
+          font-size: 1.11vw;
+          color: rgba(255, 255, 255, 0.7);
+        }
+      }
     }
   }
 

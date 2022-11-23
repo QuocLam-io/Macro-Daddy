@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import moment from "moment";
 
 const UserPage = ({ setUserPageMounted }) => {
   useEffect(() => {
@@ -11,11 +12,13 @@ const UserPage = ({ setUserPageMounted }) => {
   return (
     <div className="userpage-parent">
       <div className="userpage-left">
-        <div className="user-daily-macro">
-          <div className="test-box"></div>
-        </div>
+        <div className="user-daily-macro"></div>
         <div className="user-name">
-        <img className="plate" src="/imgs/merp.svg" alt="blub" />
+          <img className="plate" src="/imgs/merp.svg" alt="blub" />
+          <div>
+            <p>Eddie Merpy</p>
+            <p>A Daddy since</p>
+          </div>
         </div>
       </div>
       <div className="userpage-right">
