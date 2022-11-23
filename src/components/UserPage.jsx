@@ -2,6 +2,9 @@ import React, { useEffect } from "react";
 import moment from "moment";
 
 const UserPage = ({ setUserPageMounted }) => {
+
+let theDate = moment().format("MMM Do, YYYY");
+
   useEffect(() => {
     setUserPageMounted(true);
     return () => {
@@ -17,7 +20,7 @@ const UserPage = ({ setUserPageMounted }) => {
           <img className="plate" src="/imgs/merp.svg" alt="blub" />
           <div>
             <p>Eddie Merpy</p>
-            <p>A Daddy since</p>
+            <p>A Daddy since {theDate}</p>
           </div>
         </div>
       </div>
