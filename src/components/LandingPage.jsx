@@ -14,9 +14,7 @@ import { useDispatch } from "react-redux";
 const LandingPage = () => {
   const [form, setForm] = useState(false);
   const dispatch = useDispatch();
-  // const { name, age, sex, height, weight, activityLevel, bmr, signedIn } = useSelector(
-  //   (store) => store.userBio
-  // );
+
 
   return (
     <div className="landing-parent">
