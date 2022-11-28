@@ -13,9 +13,9 @@ body {
   font-family: lexend;
   color: white;
 
-  @media screen and (max-width: 420px) {
-    min-height: -webkit-fill-available;
-  }
+  // @media screen and (max-width: 420px) {
+  //   min-height: -webkit-fill-available;
+  // }
 }
 
 $semi-white: rgba(255, 255, 255, 0.7);
@@ -136,7 +136,7 @@ $test-border: 2px solid teal;
     display: flex;
     width: 50%;
     flex-direction: column;
-    // border: $test-border;
+    border: $test-border;
 
     .mobile-arrow {
       display: none;
