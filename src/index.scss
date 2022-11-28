@@ -9,18 +9,12 @@ a {
   color: inherit;
 }
 
-// body {
-//   font-family: lexend;
-//   color: white;
-
-// }
-html,
 body {
-  height: 100%;
-  margin: 0;
   font-family: lexend;
   color: white;
+
 }
+
 
 $semi-white: rgba(255, 255, 255, 0.7);
 $test-border: 2px solid teal;
