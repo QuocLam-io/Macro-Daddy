@@ -15,10 +15,9 @@ const LandingPage = () => {
   const [form, setForm] = useState(false);
   const dispatch = useDispatch();
 
-
   return (
     <div className="landing-parent">
-      <div className="landing-left">
+      <div className={form ? "mobile-hidden" : "landing-left"}>
         <div className="landing-title">
           <p>WHACKDADDY</p>
           <p>TO</p>

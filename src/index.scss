@@ -128,6 +128,12 @@ $test-border: 2px solid teal;
   padding-top: 2.5%;
   // color: antiquewhite;
 
+  .mobile-hidden {
+    @media screen and (max-width: 420px) {
+      display: none;
+    }
+  }
+
   .landing-left {
     width: 50%;
     flex-direction: column;
@@ -650,14 +656,14 @@ $test-border: 2px solid teal;
         display: flex;
         justify-content: space-between;
 
-        div{
+        div {
           display: flex;
           flex-direction: column;
           align-items: center;
           gap: 1vh;
           font-size: 1.2vw;
 
-          :nth-child(2){
+          :nth-child(2) {
             font-size: 1.9vw;
           }
         }
