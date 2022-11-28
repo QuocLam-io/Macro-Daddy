@@ -12,6 +12,10 @@ a {
 body {
   font-family: lexend;
   color: white;
+
+  @media screen and (max-width: 420px) {
+    min-height: -webkit-fill-available;
+  }
 }
 
 $semi-white: rgba(255, 255, 255, 0.7);
@@ -145,7 +149,7 @@ $test-border: 2px solid teal;
       }
       .mobile-arrow {
         display: inline-block;
-        
+
         &::before {
           content: "\00a0 ";
         }
@@ -334,8 +338,6 @@ $test-border: 2px solid teal;
         width: 100%;
         font-size: 4.5vw;
       }
-    
-      
     }
   }
 
