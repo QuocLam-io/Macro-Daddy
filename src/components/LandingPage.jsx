@@ -19,8 +19,9 @@ const LandingPage = () => {
     <div className="landing-parent">
       <div
         className={`
+        landing-left
       ${form && `mobile-hidden`} 
-      landing-left`}
+      `}
       >
         <div className="landing-title">
           <p>WHACKDADDY</p>
@@ -35,7 +36,8 @@ const LandingPage = () => {
           }}
         >
           CLICK ME
-          <span> →</span>
+          <span className="desktop-arrow"> →</span>
+          <span className="mobile-arrow"> ↓</span>
         </div>
       </div>
       {form && (

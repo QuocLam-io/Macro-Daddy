@@ -128,16 +128,29 @@ $test-border: 2px solid teal;
   padding-top: 2.5%;
   // color: antiquewhite;
 
-  .mobile-hidden {
-    @media screen and (max-width: 420px) {
-      display: none;
-    }
-  }
-
   .landing-left {
+    display: flex;
     width: 50%;
     flex-direction: column;
     // border: $test-border;
+
+    .mobile-arrow {
+      display: none;
+    }
+
+    @media screen and (max-width: 420px) {
+      width: 100%;
+      .desktop-arrow {
+        display: none;
+      }
+      .mobile-arrow {
+        display: inline-block;
+        
+        &::before {
+          content: "\00a0 ";
+        }
+      }
+    }
 
     .landing-title {
       font-family: koulen;
@@ -173,6 +186,10 @@ $test-border: 2px solid teal;
         opacity: 0;
         animation-delay: 600ms;
       }
+
+      @media screen and (max-width: 420px) {
+        font-size: 15vw;
+      }
     }
 
     > p {
@@ -180,6 +197,10 @@ $test-border: 2px solid teal;
       font-weight: 300;
       margin: 3% 0;
       letter-spacing: 1px;
+
+      @media screen and (max-width: 420px) {
+        font-size: 5.2vw;
+      }
     }
     .start-btn {
       font-family: lexend;
@@ -199,6 +220,19 @@ $test-border: 2px solid teal;
         color: #ffa726;
         transition: 0.5s;
       }
+
+      @media screen and (max-width: 420px) {
+        margin-top: auto;
+        font-size: 7vw;
+        text-align: center;
+        // border: $test-border;
+      }
+    }
+  }
+
+  .mobile-hidden {
+    @media screen and (max-width: 420px) {
+      display: none;
     }
   }
 
