@@ -17,7 +17,7 @@ const LandingPage = () => {
 
   return (
     <div className="landing-parent">
-      <div className={form ? "mobile-hidden" : "landing-left"}>
+      <div className={form ? "mobile-hidden landing-left" : "landing-left"}>
         <div className="landing-title">
           <p>WHACKDADDY</p>
           <p>TO</p>
