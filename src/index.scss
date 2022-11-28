@@ -138,7 +138,7 @@ $test-border: 2px solid teal;
     display: flex;
     width: 50%;
     flex-direction: column;
-    border: $test-border;
+    // border: $test-border;
 
     .mobile-arrow {
       display: none;
@@ -225,6 +225,10 @@ $test-border: 2px solid teal;
         transform: translateX(20px);
         color: #ffa726;
         transition: 0.5s;
+
+        @media screen and (max-width: 420px) {
+          display: none;
+        }
       }
 
       @media screen and (max-width: 420px) {
