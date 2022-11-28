@@ -14,12 +14,12 @@ body {
   color: white;
 
   min-height: 100vh;
-  min-height: fill-available;
-  min-height: -webkit-fill-available;
+  min-height: stretch;
+  min-height: -webkit-stretch;
 }
 html {
-  height: fill-available;
-  height: -webkit-fill-available;
+  height: stretch;
+  height: -webkit-stretch;
 }
 
 $semi-white: rgba(255, 255, 255, 0.7);
