@@ -136,16 +136,16 @@ $test-border: 2px solid teal;
   padding-top: 2.5%;
   // color: antiquewhite;
 
-  @media screen and (max-width: 420px) {
-    height: 80vh;
-  }
+  // @media screen and (max-width: 420px) {
+  //   height: 80vh;
+  // }
 
 
   .landing-left {
     display: flex;
     width: 50%;
     flex-direction: column;
-    // border: $test-border;
+    border: $test-border;
 
     .mobile-arrow {
       display: none;
