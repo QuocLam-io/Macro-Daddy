@@ -9,17 +9,17 @@ a {
   color: inherit;
 }
 
+// body {
+//   font-family: lexend;
+//   color: white;
+
+// }
+html,
 body {
+  height: 100%;
+  margin: 0;
   font-family: lexend;
   color: white;
-
-  min-height: 100vh;
-  min-height: stretch;
-  min-height: -webkit-stretch;
-}
-html {
-  height: stretch;
-  height: -webkit-stretch;
 }
 
 $semi-white: rgba(255, 255, 255, 0.7);
@@ -131,7 +131,7 @@ $test-border: 2px solid teal;
 
 .landing-parent {
   display: flex;
-  height: 92vh;
+  height: 75vh;
   padding: 5%;
   padding-top: 2.5%;
   // color: antiquewhite;
@@ -139,7 +139,6 @@ $test-border: 2px solid teal;
   // @media screen and (max-width: 420px) {
   //   height: 80vh;
   // }
-
 
   .landing-left {
     display: flex;
