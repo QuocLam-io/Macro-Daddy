@@ -13,9 +13,13 @@ body {
   font-family: lexend;
   color: white;
 
-  // @media screen and (max-width: 420px) {
-  //   min-height: -webkit-fill-available;
-  // }
+  min-height: 100vh;
+  min-height: fill-available;
+  min-height: -webkit-fill-available;
+}
+html {
+  height: fill-available;
+  height: -webkit-fill-available;
 }
 
 $semi-white: rgba(255, 255, 255, 0.7);
