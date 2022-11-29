@@ -96,6 +96,10 @@ $test-border: 2px solid teal;
       font-size: 2vw;
       font-family: "Lexend";
       outline: none;
+
+      @media screen and (max-width: 420px) {
+        font-size: 4.5vw;
+      }
     }
 
     button {
