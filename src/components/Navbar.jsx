@@ -63,7 +63,7 @@ const Navbar = ({ setNumOfCommon, setNumOfBranded, userPageMounted }) => {
       <Link to="/">
         <div className="icon">
           <img src="/imgs/icon.svg" alt="blub" />
-          <p>Macro DADDY</p>
+          <p >Macro DADDY</p>
         </div>
       </Link>
 

@@ -73,6 +73,11 @@ $test-border: 2px solid teal;
       display: flex;
       align-items: center;
       font-size: 4vh;
+      
+      @media screen and (max-width: 420px) {
+        display: none;
+        
+      }
     }
   }
 
