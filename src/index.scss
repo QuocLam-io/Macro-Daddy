@@ -12,9 +12,7 @@ a {
 body {
   font-family: lexend;
   color: white;
-
 }
-
 
 $semi-white: rgba(255, 255, 255, 0.7);
 $test-border: 2px solid teal;
@@ -73,10 +71,9 @@ $test-border: 2px solid teal;
       display: flex;
       align-items: center;
       font-size: 4vh;
-      
+
       @media screen and (max-width: 420px) {
         display: none;
-        
       }
     }
   }
@@ -86,6 +83,10 @@ $test-border: 2px solid teal;
     width: 40%;
     border-bottom: white 1.7px solid;
     // border: $test-border;
+
+    @media screen and (max-width: 420px) {
+      width: 55%;
+    }
 
     input {
       width: 100%;
@@ -102,6 +103,12 @@ $test-border: 2px solid teal;
       border: none;
       background: transparent;
       // border: $test-border;
+
+      img {
+        @media screen and (max-width: 420px) {
+          height: 60%;
+        }
+      }
     }
   }
   .user-page-btn {
@@ -114,11 +121,10 @@ $test-border: 2px solid teal;
     padding: 8px;
     border: #ffa726 2px solid;
     border-radius: 100px;
-    // &:hover {
-    //   color: black;
-    //   background: white;
-    //   border-radius: 2px;
-    // }
+
+    @media screen and (max-width: 420px) {
+      border: none;
+    }
 
     .merp {
       height: 100%;
@@ -230,10 +236,6 @@ $test-border: 2px solid teal;
         transform: translateX(20px);
         color: #ffa726;
         transition: 0.5s;
-
-        @media screen and (max-width: 420px) {
-          display: none;
-        }
       }
 
       @media screen and (max-width: 420px) {
@@ -245,11 +247,11 @@ $test-border: 2px solid teal;
     }
   }
 
-  .mobile-hidden {
-    @media screen and (max-width: 420px) {
-      display: none;
-    }
-  }
+  // .mobile-hidden {
+  //   @media screen and (max-width: 420px) {
+  //     display: none;
+  //   }
+  // }
 
   .landing-form {
     width: 50%;
@@ -797,5 +799,11 @@ $test-border: 2px solid teal;
         width: 100%;
       }
     }
+  }
+}
+//* ---------------------------------- Misc ---------------------------------- */
+.mobile-hidden {
+  @media screen and (max-width: 420px) {
+    display: none;
   }
 }

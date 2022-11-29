@@ -97,7 +97,7 @@ const Navbar = ({ setNumOfCommon, setNumOfBranded, userPageMounted }) => {
           {userPageMounted ? undefined : (
             <img className="merp" src="/imgs/merp.svg" alt="" />
           )}
-          MY MACROS
+          <span className="mobile-hidden" >MY MACROS</span>
         </Link>
       )}
     </div>
