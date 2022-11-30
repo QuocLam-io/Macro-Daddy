@@ -391,6 +391,11 @@ $test-border: 2px solid teal;
     width: 65vw;
     animation: intro 5000ms forwards;
 
+    @media screen and (max-width: 420px) {
+      width: 100%;
+      padding: 5%;
+    }
+
     @keyframes intro {
       0% {
         opacity: 0;
@@ -413,6 +418,7 @@ $test-border: 2px solid teal;
     @media screen and (max-width: 420px) {
       width: 100%;
       padding: 5%;
+      height: 50%;
     }
 
     .search-cards {
