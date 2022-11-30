@@ -852,7 +852,7 @@ $test-border: 2px solid teal;
           letter-spacing: 1.5px;
 
           @media screen and (max-width: 420px) {
-            font-size: 4.5vw;
+            font-size: 6vw;
             line-height: 3vh;
           }
         }
@@ -860,6 +860,12 @@ $test-border: 2px solid teal;
         :first-child + p {
           font-size: 1.11vw;
           color: rgba(255, 255, 255, 0.7);
+
+          @media screen and (max-width: 420px) {
+            font-size: 16px;
+            font-size: 4vw;
+            line-height: 3vh;
+          }
         }
       }
     }
@@ -890,6 +896,7 @@ $test-border: 2px solid teal;
         div {
           display: flex;
           flex-direction: column;
+          justify-content: end;
         }
       }
     }
