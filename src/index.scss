@@ -594,6 +594,10 @@ $test-border: 2px solid teal;
   animation: fadeIn 1000ms forwards;
   // border: $test-border;
 
+  @media screen and (max-width: 420px) {
+    display: none;
+  }
+
   @keyframes fadeIn {
     0% {
       opacity: 0;
