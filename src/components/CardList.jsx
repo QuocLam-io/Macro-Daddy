@@ -96,7 +96,8 @@ const CardList = ({
           {calories}
           <span>Calories</span> / {bmr} <span>TDEE</span>
         </div>
-        <div className="bmr-difference" style={{ fontSize: "2vw" }}>
+        <div className="bmr-difference" 
+        >
           {calories - bmr}
           <span style={{ color: "green" }}>
             &nbsp; Caloric&nbsp;
