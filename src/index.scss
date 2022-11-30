@@ -414,12 +414,12 @@ $test-border: 2px solid teal;
     width: 65%;
     padding: 2.5%;
     gap: 1%;
-    border: $test-border;
+    // border: $test-border;
 
     @media screen and (max-width: 420px) {
       width: 100%;
       padding: 5%;
-      height: 62%;
+      height: 63%;
     }
 
     .search-cards {
