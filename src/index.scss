@@ -718,6 +718,11 @@ $test-border: 2px solid teal;
   display: flex;
   // border: $test-border;
 
+  @media screen and (max-width: 420px) {
+    flex-direction: column;
+    justify-content: start;
+  }
+
   .userpage-left {
     display: flex;
     flex-direction: column;
@@ -727,6 +732,13 @@ $test-border: 2px solid teal;
     padding: 2.5%;
     padding-left: 5%;
     // border: orange 2px solid;
+
+    @media screen and (max-width: 420px) {
+      width: 100%;
+      flex-direction: column-reverse;
+      justify-content: start;
+      height: auto;
+    }
 
     .user-daily-macro {
       display: flex;
