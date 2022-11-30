@@ -240,6 +240,10 @@ $test-border: 2px solid teal;
         transform: translateX(20px);
         color: #ffa726;
         transition: 0.5s;
+
+        @media screen and (max-width: 420px) {
+          display: none;
+        }
       }
 
       @media screen and (max-width: 420px) {
