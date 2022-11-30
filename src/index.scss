@@ -488,7 +488,7 @@ $test-border: 2px solid teal;
       }
     }
 
-    .bmr-difference{
+    .bmr-difference {
       font-size: 2vw;
     }
 
@@ -501,14 +501,20 @@ $test-border: 2px solid teal;
       p {
         font-size: 6vw;
       }
-      div, .bmr-difference, .bmr-divide {
+
+      .bmr-difference {
+        display: none;
+      }
+
+      div,
+      .bmr-divide {
         font-size: 5vw;
 
         span {
           font-size: 4vw;
         }
       }
-      span{
+      span {
         font-size: 5vw;
       }
     }
