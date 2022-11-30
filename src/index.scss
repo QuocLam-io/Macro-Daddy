@@ -733,12 +733,26 @@ $test-border: 2px solid teal;
     padding-left: 5%;
     // border: orange 2px solid;
 
-    @media screen and (max-width: 420px) {
-      width: 100%;
-      flex-direction: column-reverse;
-      justify-content: start;
-      height: auto;
-    }
+    // @media screen and (max-width: 420px) {
+    //   width: 100%;
+    //   flex-direction: column-reverse;
+    //   justify-content: start;
+    //   height: auto;
+    //   padding: 0;
+
+    //   .user-daily-macro {
+    //     padding: 2.5%;
+    //   }
+
+    //   .user-name {
+    //     background: linear-gradient(
+    //         180deg,
+    //         rgba(255, 255, 255, 0.11) 0%,
+    //         rgba(255, 255, 255, 0.11) 100%
+    //       ),
+    //       #121212;
+    //   }
+    // }
 
     .user-daily-macro {
       display: flex;
@@ -753,11 +767,11 @@ $test-border: 2px solid teal;
         ),
         #121212;
       gap: 3vh;
-      // border: $test-border;
+      border: $test-border;
 
-      // > * {
-      //   border: $test-border;
-      // }
+      > * {
+        border: $test-border;
+      }
 
       .user-daily-macro-header {
         display: flex;
@@ -836,11 +850,46 @@ $test-border: 2px solid teal;
           font-size: 2.22vw;
           line-height: 5.8vh;
           letter-spacing: 1.5px;
+
+          @media screen and (max-width: 420px) {
+            font-size: 4.5vw;
+            line-height: 3vh;
+          }
         }
 
         :first-child + p {
           font-size: 1.11vw;
           color: rgba(255, 255, 255, 0.7);
+        }
+      }
+    }
+
+    @media screen and (max-width: 420px) {
+      width: 100%;
+      flex-direction: column-reverse;
+      justify-content: start;
+      height: auto;
+      padding: 0;
+
+      .user-daily-macro {
+        background: transparent;
+      }
+
+      .user-name {
+        padding: 2.5%;
+        height: 9vh;
+        gap: 0;
+        background: linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.11) 0%,
+            rgba(255, 255, 255, 0.11) 100%
+          ),
+          #121212;
+        // border: $test-border;
+
+        div {
+          display: flex;
+          flex-direction: column;
         }
       }
     }
