@@ -767,11 +767,11 @@ $test-border: 2px solid teal;
         ),
         #121212;
       gap: 3vh;
-      border: $test-border;
+      // border: $test-border;
 
-      > * {
-        border: $test-border;
-      }
+      // > * {
+      //   border: $test-border;
+      // }
 
       .user-daily-macro-header {
         display: flex;
@@ -899,7 +899,7 @@ $test-border: 2px solid teal;
 
           @media screen and (max-width: 420px) {
             font-size: 6vw;
-            line-height: 3vh;
+            // line-height: 3vh;
           }
         }
 
@@ -962,6 +962,14 @@ $test-border: 2px solid teal;
       font-size: 2.22vw;
       line-height: 5.8vh;
       letter-spacing: 1.5px;
+    }
+    @media screen and (max-width: 420px) {
+      width: 100%;
+
+      > :first-child {
+        font-size: 4vw;
+        line-height: 3vh;
+      }
     }
 
     .user-meals {
