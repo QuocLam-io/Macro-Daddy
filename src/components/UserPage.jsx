@@ -8,6 +8,7 @@ const UserPage = ({ setUserPageMounted }) => {
     (store) => store.mealHistory
   );
   const { bmr } = useSelector((store) => store.userBio);
+  
 
   let theDate = moment().format("MMM Do, YYYY");
 

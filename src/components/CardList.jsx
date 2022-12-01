@@ -10,7 +10,15 @@ const CardList = ({
   numOfBranded,
   setNumOfBranded,
 }) => {
+  /* -------------------------------------------------------------------------- */
+  const { age, sex, height, weight, activityLevel } = useSelector(
+    (store) => store.userBio
+  );
+  console.log("age:",age,"sex", sex,"height", height, "weight", weight,"level", activityLevel);
+
+  /* -------------------------------------------------------------------------- */
   const { bmr } = useSelector((store) => store.userBio);
+  console.log("bmr:", bmr)
   const { common, branded, query } = useSelector(
     (store) => store.searchResults
   );
@@ -96,8 +104,7 @@ const CardList = ({
           {calories}
           <span>Calories</span> / {bmr} <span>TDEE</span>
         </div>
-        <div className="bmr-difference" 
-        >
+        <div className="bmr-difference">
           {calories - bmr}
           <span style={{ color: "green" }}>
             &nbsp; Caloric&nbsp;

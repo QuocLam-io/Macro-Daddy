@@ -15,6 +15,7 @@ const LandingPage = () => {
   const [form, setForm] = useState(false);
   const dispatch = useDispatch();
 
+
   return (
     <div className="landing-parent">
       <div
@@ -53,15 +54,12 @@ const LandingPage = () => {
                 parseInt(e.target[3].value) * 12 + parseInt(e.target[4].value)
               )
             );
-            dispatch(setWeight(parseInt(e.target[4].value)));
-            dispatch(setActivityLevel(parseFloat(e.target[5].value)));
+            dispatch(setWeight(parseInt(e.target[5].value)));
+            dispatch(setActivityLevel(parseFloat(e.target[6].value)));
             dispatch(calculateBMR());
             dispatch(setSignedIn());
-            console.log(e.target[0]);
-            console.log(e.target[1]);
-            console.log(e.target[2]);
-            console.log(e.target[3]);
-            console.log(e.target[4]);
+            console.log(e.target[5]);
+            
           }}
         >
           <p>CREATE YOUR PROFILE</p>
