@@ -836,6 +836,52 @@ $test-border: 2px solid teal;
           }
         }
       }
+
+      @media screen and (max-width: 420px) {
+        gap: 2vh;
+
+        .user-daily-macro-header {
+          gap: 0vh;
+          :first-child {
+            font-size: 3vw;
+          }
+          :last-child {
+            font-size: 6vw;
+            line-height: 3vh;
+          }
+        }
+
+        .user-daily-macro-body {
+          gap: 2vw;
+          font-size: 6vw;
+          line-height: 3vh;
+          letter-spacing: 1.5px;
+
+          div {
+            font-size: 2.5vw;
+            align-self: flex-start;
+          }
+        }
+
+        .user-daily-macro-difference {
+          font-size: 2.5vw;
+
+          :first-child {
+            font-size: 4vw;
+          }
+        }
+
+        .user-daily-macro-footer {
+          div {
+            gap: 0vh;
+            font-size: 2.5vw;
+
+            :nth-child(2) {
+              font-size: 4vw;
+            }
+          }
+        }
+      }
     }
 
     .user-name {
