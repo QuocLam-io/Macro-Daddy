@@ -58,15 +58,13 @@ const LandingPage = () => {
             dispatch(setActivityLevel(parseFloat(e.target[6].value)));
             dispatch(calculateBMR());
             dispatch(setSignedIn());
-            console.log(e.target[5]);
-            
           }}
         >
           <p>CREATE YOUR PROFILE</p>
           <p>Enter Your Name</p>
           <input required type="text" placeholder="Name" />
           <p>CALCULATE HOW MANY CALORIES YOU USE DAILY</p>
-          <p>Harris-Benedict Calculator</p>
+          <p>Mifflin-St Jeor Calculator</p>
           <p>
             We use your <span> Total Daily Expenditure (TDEE)</span> as a
             baseline to help recommend the amount of macros you can plan to
