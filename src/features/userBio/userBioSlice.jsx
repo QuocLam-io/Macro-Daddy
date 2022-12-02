@@ -39,8 +39,11 @@ const userBioSlice = createSlice({
     calculateBMR: (state) => {
       if (state.sex === "female") {
         state.bmr = Math.round(
-          // (655 + 4.35 * state.weight + 4.7 * state.height - 4.7 * state.age) 
-          // * state.activityLevel
+          (9.99 * (state.weight * 0.45) +
+            6.25 * (state.height * 2.54) -
+            4.92 * state.age -
+            161) 
+          * state.activityLevel
         );
       } else {
         state.bmr = Math.round(
