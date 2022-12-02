@@ -7,7 +7,7 @@ const UserPage = ({ setUserPageMounted }) => {
   const { meals, protein, carbs, fat, calories } = useSelector(
     (store) => store.mealHistory
   );
-  const { bmr } = useSelector((store) => store.userBio);
+  const { bmr, name } = useSelector((store) => store.userBio);
   
 
   let theDate = moment().format("MMM Do, YYYY");
@@ -63,7 +63,7 @@ const UserPage = ({ setUserPageMounted }) => {
         <div className="user-name">
           <img className="plate" src="/imgs/merp.svg" alt="blub" />
           <div>
-            <p>Eddie Merpy</p>
+            <p>{name}</p>
             <p>A Daddy since {theDate}</p>
           </div>
         </div>
