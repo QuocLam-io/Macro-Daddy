@@ -156,7 +156,7 @@ $test-border: 2px solid teal;
     // border: $test-border;
 
     .mobile-arrow {
-      display: none;
+        display: none;
     }
 
     @media screen and (max-width: 420px) {
@@ -235,7 +235,7 @@ $test-border: 2px solid teal;
       cursor: pointer;
       // border: $test-border;
 
-      &:hover > span {
+      &:hover > .desktop-arrow {
         display: inline-block;
         transform: translateX(20px);
         color: #ffa726;
