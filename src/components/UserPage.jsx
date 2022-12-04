@@ -7,16 +7,11 @@ const UserPage = ({ setUserPageMounted }) => {
   const { meals, protein, carbs, fat, calories } = useSelector(
     (store) => store.mealHistory
   );
-  const { bmr, name, sex } = useSelector((store) => store.userBio);
+  const { bmr, name } = useSelector((store) => store.userBio);
 
   let theDate = moment().format("MMM Do, YYYY");
 
-  let dadMom
-  if (sex === "male") {
-    dadMom = "Daddy"
-  } else {
-    dadMom = "Mami"
-  }
+
 
   useEffect(() => {
     setUserPageMounted(true);
@@ -70,7 +65,7 @@ const UserPage = ({ setUserPageMounted }) => {
           <img className="plate" src="/imgs/merp.svg" alt="blub" />
           <div>
             <p>{name}</p>
-            <p>A {dadMom} since {theDate}</p>
+            <p>A Baddi since {theDate}</p>
           </div>
         </div>
       </div>
