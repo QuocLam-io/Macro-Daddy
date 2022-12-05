@@ -1,6 +1,6 @@
-# Positive Place/Negative Space (Front-End)
->  A mobile-friendly Fullstack Mern Crud app wherein users can note daily posts of what they are grateful for (or upset about). Inspired by [Kurzgestat's Gratitude Journal](https://shop-us.kurzgesagt.org/products/gratitude-journal?variant=32410837352496), with a minimalist designed theme that can be toggled for light/dark positive/negative mode.
-> Live demo [Positive Place](https://positive-place.netlify.app/).
+# MacroDaddy
+>  A mobile-friendly Frontend application that utilizes an evidenced-based algorithm to calculate a person's Total Daily Expenditure (calories burned in a day) by user's biometric inputs and compares that to their caloric intake that is generated through The Nutrionix API, to calculate weight lose or gain in a given day.
+> Live demo [MacroDaddy](https://macro-daddy.netlify.app/).
 
 ## Table of Contents
 * [General Info](#general-information)
@@ -11,15 +11,12 @@
 
 
 ## General Information
-Positive Place was designed to provide an easily accessible and low effort service to improve mental health. There's emerging evidence that practicing gratitude on a daily basis not only produce an immediate relief but also trains the brain to develop the mental faculties to consistently recognize the qualities of life that are normally taken for granted. The app recognizes that it is unhealthy to be in a state of constantly desiring a positive outcome, so there is a mode referred to as "Negative Space" that's reserved for days to air grievances. The Negative Mode is triggered by a custom toggle, affectionately named Mr. Merp, on the bottom right corner of the screen. The app supports User Authentication and has backend support to revisit, edit, and delete previous posts.
+MacroDaddy was designed to have a centralized location for users to keep track of their macro-nutritional intake and compare them to their Total Daily Expenditure (TDEE), generated using the "Mifflin-St Jeor" formula. Their TDEE or BMR is calculated through the formula by calculating user's biometrics such as height, weight, age, and sex and compared using the Nutritionix API to search and output what the users ate that day and what nutritional content those dishes have. The user is able to record their calories, fats, proteins, and carbohydrates intake.
 
 
 
 ## Technologies Used
-- Front-end: React, Sass
-- Back-end: Mongoose, Express, Node.js
-- Libraries: Framer Motion, Bycrypt, Express Sessions
-
+React, Sass, Redux
 
 ## Features
 - Custom sliding toggle to switch from "Positive Place" (to express gratitudes) and "Negative Space" (to expressive attitudes).
