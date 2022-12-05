@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+# Macro-Daddy
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## General Info
+> An evidence-based tool to calculate a person's biometrics to out put their Total Daily Energy Expenditure (TDEE) in calories, that uses a nutrition database to track caloric intake to compare whether they gained or lost weight on the day.
 
-## Available Scripts
 
-In the project directory, you can run:
+## Images
+<img width="1440" alt="Screen Shot 2022-06-10 at 9 08 23 AM" src="https://user-images.githubusercontent.com/82473096/173071398-82e37bd0-34ac-4a51-96ac-335b4b10ef79.png">
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies
+* HTML
+* CSS
+* React
+* Figma
+* Axios
 
-### `npm test`
+## Setup
+* Fork Repo
+* Copy SSH Link
+* Go to any folder where you'd like to let Astro Boy live
+* git clone /link/
+* https://macro-daddy.netlify.app/
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Code Example
 
-### `npm run build`
+Here is a snippet of my button code that initializes the divs to have the hidden word appear in the center as boxes and the music to start.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+//! ------------------------------ TDEE Equation ----------------------------- */
+>  useEffect(() => {
+    if (userStats.gender === "female") {
+      setBmr(
+        Math.round(
+          (655 +
+            4.35 * userStats.weight +
+            4.7 * userStats.height -
+            4.7 * userStats.age) *
+            userStats.physical
+        )
+      );
+    } else {
+      setBmr(
+        Math.round(
+          (66 +
+            6.23 * userStats.weight +
+            12.7 * userStats.height -
+            6.8 * userStats.age) *
+            userStats.physical
+        )
+      );
+    }
+  }, []);
+  
+  
+## Features
+* An equation that calulates your TDEE based on your input biometrics
+* A live update of your macro intake as you select foods you ate
+* A user page to track history
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To-do List:
+* Add dates to history
+* A backend to add photo
+* Pagination for food cards
+* Media Queries
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Status
+Project is: _largely finished_. New features and UX aesthetics to be implemented.
 
-### `npm run eject`
+## Inspiration
+My nutrition degree
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Contact
+Created by ME! ME ME ME ME ME! Muahahahahahahahaha
