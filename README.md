@@ -34,4 +34,4 @@ React, Sass, Redux
 <img width="350" alt="Screen Shot 2022-09-12 at 8 25 46 PM" src="https://user-images.githubusercontent.com/82473096/206060165-ce57ea8b-f0fb-423b-ad38-44b9cd05cfae.png">
 
 ## Project Status
-Project is: Frontend Complete! Possible integration of backend to maintain user history.
+Project is: _Frontend Complete!_ Possible integration of backend to maintain user history.
