@@ -31,7 +31,7 @@ React, Sass, Redux
 
 <img width="722" alt="Screen Shot 2022-09-12 at 8 20 23 PM" src="https://user-images.githubusercontent.com/82473096/206060148-da2da845-7987-4f2c-a01f-4ff05638f924.png">
 
-<img width="723" alt="Screen Shot 2022-09-12 at 8 25 46 PM" src="https://user-images.githubusercontent.com/82473096/206060165-ce57ea8b-f0fb-423b-ad38-44b9cd05cfae.png">
+<img width="350" alt="Screen Shot 2022-09-12 at 8 25 46 PM" src="https://user-images.githubusercontent.com/82473096/206060165-ce57ea8b-f0fb-423b-ad38-44b9cd05cfae.png">
 
 ## Project Status
 Project is: Frontend Complete! Possible integration of backend to maintain user history.
