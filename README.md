@@ -19,17 +19,15 @@ MacroDaddy was designed to have a centralized location for users to keep track o
 React, Sass, Redux
 
 ## Features
-- Custom sliding toggle to switch from "Positive Place" (to express gratitudes) and "Negative Space" (to expressive attitudes).
-- Negative Space and Positive Place are set to light and dark mode
-- Backend uses bcrypt and express sessions to provide password hashing for secure User Authentication
-- Mobile friendly
-- Floating cubes and glass panels with blur effect for calming effect to fit the tone
-- Desktop has a page dedicated to Software Engineering cohort
+- Formula that translates user's biometric inputs to how many calories necessary in the day to lose/gain weight
+- Nutritionix API that supports "natural language" to search robust database to for food items and their nutritional contents
+- Selected foods will record and calculate user's macros consumption (Fats, Proteins, Carbohydrates, and Calories)
+- Responsive design for mobile
 
 
 ## Screenshots
 
-<img width="722" alt="Screen Shot 2022-09-12 at 8 18 11 PM" src="https://user-images.githubusercontent.com/82473096/189783114-d3ee1e85-3906-4e04-97a9-088cdec527fd.png">
+<img width="722" alt="Screen Shot 2022-09-12 at 8 18 11 PM" src="https://user-images.githubusercontent.com/82473096/206060078-c34dc21c-f303-41d4-ac41-3362a756294d.png">
 
 <img width="722" alt="Screen Shot 2022-09-12 at 8 20 23 PM" src="https://user-images.githubusercontent.com/82473096/189783107-7eb6a592-f628-4643-b657-086059ed283b.png">
 
