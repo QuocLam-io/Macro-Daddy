@@ -29,13 +29,9 @@ React, Sass, Redux
 
 <img width="722" alt="Screen Shot 2022-09-12 at 8 18 11 PM" src="https://user-images.githubusercontent.com/82473096/206060078-c34dc21c-f303-41d4-ac41-3362a756294d.png">
 
-<img width="722" alt="Screen Shot 2022-09-12 at 8 20 23 PM" src="https://user-images.githubusercontent.com/82473096/189783107-7eb6a592-f628-4643-b657-086059ed283b.png">
+<img width="722" alt="Screen Shot 2022-09-12 at 8 20 23 PM" src="https://user-images.githubusercontent.com/82473096/206060148-da2da845-7987-4f2c-a01f-4ff05638f924.png">
 
-<img width="723" alt="Screen Shot 2022-09-12 at 8 25 46 PM" src="https://user-images.githubusercontent.com/82473096/189783147-629c54a4-25ee-42ed-8d21-552fa8231f6b.png">
-
-<img width="117" alt="Screen Shot 2022-09-12 at 8 20 44 PM" src="https://user-images.githubusercontent.com/82473096/189783133-a5f625ff-e38d-4f80-b5f4-738c956308dd.png">
-
-![Screen Shot 2022-09-12 at 8 48 44 PM](https://user-images.githubusercontent.com/82473096/189783531-13fd6153-da41-4112-867f-2b5d08906853.png)
+<img width="723" alt="Screen Shot 2022-09-12 at 8 25 46 PM" src="https://user-images.githubusercontent.com/82473096/206060165-ce57ea8b-f0fb-423b-ad38-44b9cd05cfae.png">
 
 ## Project Status
-Project is: _finished_ (pending whether Heroku follows through with dismantling their free tier)
+Project is: Frontend Complete! Possible integration of backend to maintain user history.
