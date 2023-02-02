@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+# MacroDaddy
+>  A mobile-friendly Frontend application that utilizes an evidenced-based algorithm to calculate a person's Total Daily Expenditure (calories burned in a day) by user's biometric inputs and compares that to their caloric intake that is generated through The Nutrionix API, to calculate weight lose or gain in a given day.
+> Live demo [MacroDaddy](https://macro-daddy.netlify.app/).
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of Contents
+* [General Info](#general-information)
+* [Technologies Used](#technologies-used)
+* [Features](#features)
+* [Screenshots](#screenshots)
+* [Project Status](#project-status)
 
-## Available Scripts
 
-In the project directory, you can run:
+## General Information
+MacroDaddy was designed to have a centralized location for users to keep track of their macro-nutritional intake and compare them to their Total Daily Expenditure (TDEE), generated using the "Mifflin-St Jeor" formula. Their TDEE or BMR is calculated through the formula by calculating user's biometrics such as height, weight, age, and sex and compared using the Nutritionix API to search and output what the users ate that day and what nutritional content those dishes have. The user is able to record their calories, fats, proteins, and carbohydrates intake.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies Used
+React, Sass, Redux
 
-### `npm test`
+## Features
+- Formula that translates user's biometric inputs to how many calories necessary in the day to lose/gain weight
+- Nutritionix API that supports "natural language" to search robust database to for food items and their nutritional contents
+- Selected foods will record and calculate user's macros consumption (Fats, Proteins, Carbohydrates, and Calories)
+- Responsive design for mobile
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Screenshots
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<img width="722" alt="Screen Shot 2022-09-12 at 8 18 11 PM" src="https://user-images.githubusercontent.com/82473096/206060078-c34dc21c-f303-41d4-ac41-3362a756294d.png">
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<img width="722" alt="Screen Shot 2022-09-12 at 8 20 23 PM" src="https://user-images.githubusercontent.com/82473096/206060148-da2da845-7987-4f2c-a01f-4ff05638f924.png">
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<img width="350" alt="Screen Shot 2022-09-12 at 8 25 46 PM" src="https://user-images.githubusercontent.com/82473096/206060165-ce57ea8b-f0fb-423b-ad38-44b9cd05cfae.png">
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Project Status
+Project is: _Frontend Complete!_ Possible integration of backend to maintain user history.
