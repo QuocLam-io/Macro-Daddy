@@ -21,8 +21,8 @@ const CommonCard = ({ food }) => {
         },
         {
           headers: {
-            "x-app-id": import.meta.env.API_ID,
-            "x-app-key": import.meta.env.API_KEY,
+            "x-app-id": process.env.REACT_APP_MD_API_ID,
+            "x-app-key": process.env.REACT_APP_MD_API_KEY,
           },
         }
       )

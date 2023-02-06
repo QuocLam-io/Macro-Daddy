@@ -4,13 +4,16 @@ import LandingPage from "./components/LandingPage";
 import CardList from "./components/CardList";
 import UserPage from "./components/UserPage";
 import { useSelector } from "react-redux";
-import {useState} from 'react'
+import { useState } from "react";
 
 function App() {
   const { signedIn } = useSelector((store) => store.userBio);
   const [numOfCommon, setNumOfCommon] = useState(4);
   const [numOfBranded, setNumOfBranded] = useState(4);
   const [userPageMounted, setUserPageMounted] = useState(false);
+
+  console.log(process.env.REACT_APP_MD_API_KEY);
+  console.log(process.env.REACT_APP_MD_API_ID);
 
   return (
     <div className="App">
@@ -35,9 +38,10 @@ function App() {
             )
           }
         ></Route>
-        <Route path="/userpage" element={<UserPage 
-        setUserPageMounted={setUserPageMounted}
-        />} />
+        <Route
+          path="/userpage"
+          element={<UserPage setUserPageMounted={setUserPageMounted} />}
+        />
       </Routes>
     </div>
   );

@@ -9,7 +9,6 @@ import {
   increaseProtein,
 } from "../features/mealHistory/mealHistorySlice";
 
-
 const BrandedCard = ({ food }) => {
   const dispatch = useDispatch();
 
@@ -19,8 +18,8 @@ const BrandedCard = ({ food }) => {
         `https://trackapi.nutritionix.com/v2/search/item?nix_item_id=${food.nix_item_id}`,
         {
           headers: {
-            "x-app-id": import.meta.env.API_ID,
-            "x-app-key": import.meta.env.API_KEY,
+            "x-app-id": process.env.REACT_APP_MD_APP_ID,
+            "x-app-key": process.env.REACT_APP_MD_API_KEY,
           },
         }
       )

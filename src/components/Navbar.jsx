@@ -14,8 +14,6 @@ const Navbar = ({ setNumOfCommon, setNumOfBranded, userPageMounted }) => {
   const [searchQuery, setSearchQuery] = useState("");
   const dispatch = useDispatch();
 
-  
-
   //? --------------------------- Searchbar Function -------------------------- */
 
   const callRecipeAxios = () => {
@@ -24,8 +22,8 @@ const Navbar = ({ setNumOfCommon, setNumOfBranded, userPageMounted }) => {
         `https://trackapi.nutritionix.com/v2/search/instant?query=${searchQuery}`,
         {
           headers: {
-            "x-app-id": import.meta.env.API_ID,
-            "x-app-key": import.meta.env.API_KEY,
+            "x-app-id": process.env.REACT_APP_MD_API_ID,
+            "x-app-key": process.env.REACT_APP_MD_API_KEY,
           },
         }
       )
@@ -63,7 +61,7 @@ const Navbar = ({ setNumOfCommon, setNumOfBranded, userPageMounted }) => {
       <Link to="/">
         <div className="icon">
           <img src="/imgs/icon.svg" alt="blub" />
-          <p >Macro DADDY</p>
+          <p>Macro DADDY</p>
         </div>
       </Link>
 
@@ -97,7 +95,7 @@ const Navbar = ({ setNumOfCommon, setNumOfBranded, userPageMounted }) => {
           {userPageMounted ? undefined : (
             <img className="merp" src="/imgs/merp.svg" alt="" />
           )}
-          <span className="mobile-hidden" >MY MACROS</span>
+          <span className="mobile-hidden">MY MACROS</span>
         </Link>
       )}
     </div>
