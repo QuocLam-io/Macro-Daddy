@@ -14,7 +14,7 @@ const Navbar = ({ setNumOfCommon, setNumOfBranded, userPageMounted }) => {
   const [searchQuery, setSearchQuery] = useState("");
   const dispatch = useDispatch();
 
-  //TODO: Make dotenv file
+  
 
   //? --------------------------- Searchbar Function -------------------------- */
 
