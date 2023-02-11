@@ -28,7 +28,7 @@ const Navbar = ({ setNumOfCommon, setNumOfBranded, userPageMounted }) => {
         }
       )
       .then((res) => {
-        console.table(res.data);
+        // console.table(res.data);
         dispatch(setCommon(res.data.common));
         dispatch(setBranded(res.data.branded));
         setNumOfBranded(4);
@@ -43,7 +43,7 @@ const Navbar = ({ setNumOfCommon, setNumOfBranded, userPageMounted }) => {
   const handleKeyDown = (event) => {
     if (event.key === "Enter") {
       submitHandler(event);
-      console.log("Enter key pressed ✅");
+      // console.log("Enter key pressed ✅");
     }
   };
 

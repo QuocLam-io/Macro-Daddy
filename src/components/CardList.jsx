@@ -14,22 +14,22 @@ const CardList = ({
   const { age, sex, height, weight, activityLevel } = useSelector(
     (store) => store.userBio
   );
-  console.log(
-    "age:",
-    age,
-    "sex",
-    sex,
-    "height",
-    height,
-    "weight",
-    weight,
-    "level",
-    activityLevel
-  );
+  // console.log(
+  //   "age:",
+  //   age,
+  //   "sex",
+  //   sex,
+  //   "height",
+  //   height,
+  //   "weight",
+  //   weight,
+  //   "level",
+  //   activityLevel
+  // );
 
   /* -------------------------------------------------------------------------- */
   const { bmr } = useSelector((store) => store.userBio);
-  console.log("bmr:", bmr);
+  // console.log("bmr:", bmr);
   const { common, branded, query } = useSelector(
     (store) => store.searchResults
   );

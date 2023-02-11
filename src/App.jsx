@@ -12,8 +12,8 @@ function App() {
   const [numOfBranded, setNumOfBranded] = useState(4);
   const [userPageMounted, setUserPageMounted] = useState(false);
 
-  console.log(process.env.REACT_APP_MD_API_KEY);
-  console.log(process.env.REACT_APP_MD_API_ID);
+  // console.log(process.env.REACT_APP_MD_API_KEY);
+  // console.log(process.env.REACT_APP_MD_API_ID);
 
   return (
     <div className="App">

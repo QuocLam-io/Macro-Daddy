@@ -18,7 +18,7 @@ const BrandedCard = ({ food }) => {
         `https://trackapi.nutritionix.com/v2/search/item?nix_item_id=${food.nix_item_id}`,
         {
           headers: {
-            "x-app-id": process.env.REACT_APP_MD_APP_ID,
+            "x-app-id": process.env.REACT_APP_MD_API_ID,
             "x-app-key": process.env.REACT_APP_MD_API_KEY,
           },
         }
